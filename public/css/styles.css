@@ -1,0 +1,106 @@
+:root {
+  --color-dark: #333;
+  --color-primary: #ee8013;
+  --space-small: 20px;
+  --shadow-header: 0 0 10px rgba(0, 0, 0, 0.2);
+  --duration-base: 0.2s
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+body {
+  font-family: 'PT Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1
+}
+.container {
+  margin: 0 auto;
+  max-width: 1200px
+}
+@media (max-width:575.98px) {
+  .container {
+    width: 100%
+  }
+  .wrapper {
+    padding: var(--space-extra-large) var(--space-small)
+  }
+}
+@media (min-width:576px) and (max-width:767.98px) {
+  .container {
+    width: 540px
+  }
+}
+@media (min-width:768px) and (max-width:991.98px) {
+  .container {
+    width: 720px
+  }
+}
+@media (min-width:992px) and (max-width:1199.98px) {
+  .container {
+    width: 960px
+  }
+}
+@media (min-width:1200px) {
+  .container {
+    width: 1140px
+  }
+}
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: var(--space-small) 0;
+  -webkit-box-shadow: var(--shadow-header);
+  box-shadow: var(--shadow-header)
+}
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none
+}
+.header__link {
+  display: block;
+  padding: 0 var(--space-small);
+  text-decoration: none;
+  color: var(--color-dark);
+  -webkit-transition-duration: var(--duration-base);
+  -o-transition-duration: var(--duration-base);
+  transition-duration: var(--duration-base);
+  -webkit-transition-property: color,-webkit-transform;
+  transition-property: color,-webkit-transform;
+  -o-transition-property: transform,color;
+  transition-property: transform,color;
+  transition-property: transform,color,-webkit-transform
+}
+.header__link:hover {
+  -webkit-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  transform: translateY(-1px);
+  color: var(--color-primary)
+}
+.subheader__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.call {
+  color: red
+}
+.company {
+  color: #00f
+}
+.icons {
+  color: green
+}

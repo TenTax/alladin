@@ -1,0 +1,25 @@
+// section header
+.header {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-small) 0;
+    box-shadow: var(--shadow-header);
+
+    &__menu {
+        display: flex;
+        list-style: none;
+    }
+
+    &__link {
+        display: block;
+        padding: 0 var(--space-small);
+        text-decoration: none;
+        color: var(--color-dark);
+        transition-duration: var(--duration-base);
+        transition-property: transform, color;
+    }
+    &__link:hover {
+        transform: translateY(-1px);
+        color: var(--color-primary);
+    }
+}
