@@ -12,6 +12,7 @@
   --space-super-small: 5px;
   --space-medium: 30px;
   --space-large: 40px;
+  --space-extra-large: 50px;
   --shadow-header: 0 0 10px rgba(0, 0, 0, 0.2);
   --duration-base: 0.2s
 }
@@ -357,4 +358,102 @@ body {
 }
 .form_red {
   color: var(--color-error)
+}
+.catalog__box {
+  padding: var(--space-extra-large) 0
+}
+.catalog__group {
+  margin: var(--space-medium) 0
+}
+.catalog__title {
+  color: var(--color-dark);
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center
+}
+.catalog__desc {
+  color: var(--color-dark);
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  margin-top: var(--space-small)
+}
+.catalog__carts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+.cart {
+  padding: var(--space-small);
+  border: 1px solid var(--color-medium-grey);
+  max-width: 340px;
+  border-radius: 5px;
+  margin: 20px
+}
+.cart__title {
+  color: var(--color-dark);
+  font-weight: 700;
+  font-size: 25px;
+  text-align: center;
+  margin-top: var(--space-medium)
+}
+.cart__price {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  margin: var(--space-small) 0
+}
+.cart__img {
+  width: 100%
+}
+.cart__table {
+  width: 100%;
+  border: none;
+  border-collapse: collapse
+}
+.cart__table tr:nth-child(odd) {
+  background-color: var(--color-medium-grey)
+}
+.cart__th {
+  text-align: left;
+  padding: var(--space-extra-small);
+  color: var(--color-dark);
+  font-weight: 700;
+  font-size: 16px
+}
+.cart__td {
+  text-align: left;
+  padding: var(--space-extra-small);
+  color: var(--color-dark);
+  font-weight: 400;
+  font-size: 16px
+}
+.cart__button {
+  width: 100%;
+  border: none;
+  background: var(--gradient-primary);
+  border-radius: 5px;
+  padding: 12px 16px;
+  line-height: 26px;
+  outline: 0;
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition-duration: var(--duration-base);
+  -o-transition-duration: var(--duration-base);
+  transition-duration: var(--duration-base);
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  margin-top: var(--space-small)
+}
+.cart__button:hover {
+  opacity: .9
 }
