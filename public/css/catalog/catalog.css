@@ -1,9 +1,6 @@
 .catalog__box {
   padding: var(--space-extra-large) 0
 }
-.catalog__group {
-  margin: var(--space-medium) 0
-}
 .catalog__title {
   color: var(--color-dark);
   font-weight: 700;
