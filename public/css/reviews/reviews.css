@@ -9,7 +9,7 @@
   font-size: 40px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: var(--space-medium)
+  margin-bottom: var(--space-large)
 }
 .reviews__slider {
   display: -webkit-box;
@@ -21,4 +21,110 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center
+}
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.slider__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.slider__item:first-child {
+  margin-right: var(--space-medium)
+}
+.slider__item:last-child {
+  margin-left: var(--space-medium)
+}
+.slider__arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-dark-grey);
+  color: var(--color-white);
+  font-size: 20px;
+  cursor: pointer
+}
+.slider__cart {
+  width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: var(--color-dark-grey);
+  overflow: hidden;
+  border-radius: 5px
+}
+.slider__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: var(--space-medium)
+}
+.slider__desc {
+  color: var(--color-white);
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 400
+}
+.slider__name {
+  color: var(--color-white);
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: var(--space-small)
+}
+.slider__position {
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: var(--space-extra-small)
+}
+.slider__img {
+  width: 400px
+}
+.slider__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: var(--space-small)
+}
+.slider__navitem {
+  width: 15px;
+  height: 15px;
+  background-color: var(--color-dark-grey);
+  border-radius: 50%;
+  margin: 0 var(--space-super-small);
+  cursor: pointer
+}
+.slider__navitem:hover,
+.slider__navitem_active {
+  background-color: var(--color-primary)
 }
