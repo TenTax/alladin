@@ -1,5 +1,6 @@
 :root {
   --color-dark: #333;
+  --color-extra-dark: #222;
   --color-white: #fff;
   --color-primary: #ee8013;
   --color-medium-grey: #eaeaea;
@@ -706,4 +707,99 @@ body {
 .slider__navitem:hover,
 .slider__navitem_active {
   background-color: var(--color-primary)
+}
+.maps {
+  margin-bottom: -2px
+}
+.footer {
+  background-color: var(--color-dark);
+  min-height: 320px
+}
+.footer__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: var(--space-extra-large) 0;
+  position: relative
+}
+.footer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+.footer__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 18px;
+  margin-bottom: var(--space-small);
+  margin-right: var(--space-medium)
+}
+.footer__circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-extra-dark);
+  color: var(--color-white);
+  border-radius: 50%;
+  margin-right: var(--space-extra-small)
+}
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+.social__circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-white);
+  border-radius: 50%;
+  margin: 0 var(--space-extra-small);
+  text-decoration: none;
+  font-size: 16px
+}
+.social__circle:nth-child(1) {
+  background-color: #4c6c90;
+  margin-left: 0
+}
+.social__circle:nth-child(2) {
+  background-color: #55abed
+}
+.social__circle:nth-child(3) {
+  background-color: #3b5997
+}
+.social__circle:nth-child(4) {
+  background-color: #f58534;
+  margin-right: 0
+}
+.form_for-footer {
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 500px
 }
