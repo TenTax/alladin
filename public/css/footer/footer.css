@@ -1,6 +1,6 @@
 .footer {
   background-color: var(--color-dark);
-  min-height: 320px
+  min-height: 340px
 }
 .footer__box {
   display: -webkit-box;
@@ -87,6 +87,6 @@
 .form_for-footer {
   position: absolute;
   right: 0;
-  bottom: -50px;
+  bottom: -20px;
   width: 500px
 }

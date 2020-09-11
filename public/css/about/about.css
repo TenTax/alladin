@@ -41,3 +41,6 @@
   font-size: 18px;
   font-weight: 700
 }
+.about__button:hover {
+  opacity: .9
+}
