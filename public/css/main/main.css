@@ -21,6 +21,21 @@
 .main__item {
   max-width: 600px
 }
+@media (min-width:576px) and (max-width:767.98px) {
+  .main__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  .main__item {
+    max-width: 100%;
+    width: 100%
+  }
+  .main__item:nth-child(2) {
+    margin-top: var(--space-large)
+  }
+}
 @media (min-width:768px) and (max-width:991.98px) {
   .main__box {
     -webkit-box-orient: vertical;
@@ -53,6 +68,11 @@
   font-weight: 700;
   margin-top: var(--space-large);
   margin-bottom: var(--space-small)
+}
+@media (min-width:576px) and (max-width:767.98px) {
+  .sale {
+    padding-right: var(--space-medium)
+  }
 }
 @media (min-width:992px) and (max-width:1199.98px) {
   .sale {
@@ -174,6 +194,12 @@
 }
 .form_red {
   color: var(--color-error)
+}
+@media (min-width:576px) and (max-width:767.98px) {
+  .form {
+    max-width: 100%;
+    width: 100%
+  }
 }
 @media (min-width:768px) and (max-width:991.98px) {
   .form {

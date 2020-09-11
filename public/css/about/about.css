@@ -44,3 +44,15 @@
 .about__button:hover {
   opacity: .9
 }
+@media (min-width:576px) and (max-width:767.98px) {
+  .about__title {
+    font-size: 35px
+  }
+  .about__desc {
+    font-size: 18px
+  }
+  .about__button {
+    padding: var(--space-small) var(--space-medium);
+    font-size: 16px
+  }
+}

@@ -1,3 +1,9 @@
 .maps {
-  margin-bottom: -2px
+  margin-bottom: -2px;
+  height: 450px
+}
+@media (min-width:576px) and (max-width:767.98px) {
+  .maps {
+    height: 300px
+  }
 }
