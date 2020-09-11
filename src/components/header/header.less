@@ -1,11 +1,11 @@
 // section header
 .header {
-    // position: sticky;
-    // top: 0;
+    position: sticky;
+    top: 0;
     box-shadow: var(--shadow-header);
     background-color: var(--color-white);
     overflow: hidden;
-    // z-index: 1;
+    z-index: 1;
 
     &__menu {
         display: flex;
@@ -33,4 +33,10 @@
     .header {
        display: none;
     }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .header {
+        display: none;
+     }
 }

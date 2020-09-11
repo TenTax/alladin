@@ -3,7 +3,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  overflow: hidden
+  overflow: hidden;
+  background-attachment: fixed
 }
 .about__box {
   padding: var(--space-extra-large) 0

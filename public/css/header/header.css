@@ -1,8 +1,12 @@
 .header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   -webkit-box-shadow: var(--shadow-header);
   box-shadow: var(--shadow-header);
   background-color: var(--color-white);
-  overflow: hidden
+  overflow: hidden;
+  z-index: 1
 }
 .header__menu {
   display: -webkit-box;
@@ -36,6 +40,11 @@
   color: var(--color-primary)
 }
 @media (max-width:575.98px) {
+  .header {
+    display: none
+  }
+}
+@media (min-width:576px) and (max-width:767.98px) {
   .header {
     display: none
   }

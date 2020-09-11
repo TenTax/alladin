@@ -5,7 +5,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  overflow: hidden
+  overflow: hidden;
+  background-attachment: fixed
 }
 .main__box {
   display: -webkit-box;

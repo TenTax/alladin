@@ -1,7 +1,6 @@
 .footer {
   background-color: var(--color-dark);
-  min-height: 340px;
-  overflow: hidden
+  min-height: 340px
 }
 .footer__box {
   display: -webkit-box;
