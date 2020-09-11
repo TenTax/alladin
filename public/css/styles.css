@@ -390,6 +390,49 @@ body {
   line-height: 22px;
   margin-top: var(--space-extra-small)
 }
+.about {
+  background-image: url(http://lp3-gr-textiles.oml.ru/thumb/2/bgxhtH9azgTZ9vBPNRiycg/1288r/d/54931803_2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover
+}
+.about__box {
+  padding: var(--space-extra-large) 0
+}
+.about__banner {
+  background-color: rgba(0,0,0,.5);
+  padding: var(--space-large) var(--space-medium);
+  max-width: 800px
+}
+.about__title {
+  color: var(--color-white);
+  font-size: 50px;
+  font-weight: 700
+}
+.about__desc {
+  color: var(--color-light-grey);
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: var(--space-medium);
+  line-height: 28px
+}
+.about__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 180px;
+  background: var(--gradient-primary);
+  padding: var(--space-small) var(--space-medium);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: var(--space-medium);
+  font-size: 18px;
+  font-weight: 700
+}
 .catalog__box {
   padding: var(--space-extra-large) 0
 }
@@ -446,7 +489,7 @@ body {
   border-collapse: collapse
 }
 .cart__table tr:nth-child(odd) {
-  background-color: var(--color-medium-grey)
+  background-color: var(--color-light-grey)
 }
 .cart__th {
   text-align: left;
@@ -630,36 +673,6 @@ body {
 .gallery__circle:hover,
 .gallery__circle_active {
   background-color: var(--color-primary)
-}
-.brands__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: var(--space-extra-large) 0
-}
-.brands__title {
-  color: var(--color-dark);
-  font-size: 40px;
-  font-weight: 700
-}
-.brands__group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center
-}
-.brands__img {
-  width: 160px;
-  margin: var(--space-small)
 }
 .reviews {
   background-color: var(--color-light-grey)

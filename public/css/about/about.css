@@ -1,0 +1,43 @@
+.about {
+  background-image: url(http://lp3-gr-textiles.oml.ru/thumb/2/bgxhtH9azgTZ9vBPNRiycg/1288r/d/54931803_2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover
+}
+.about__box {
+  padding: var(--space-extra-large) 0
+}
+.about__banner {
+  background-color: rgba(0,0,0,.5);
+  padding: var(--space-large) var(--space-medium);
+  max-width: 800px
+}
+.about__title {
+  color: var(--color-white);
+  font-size: 50px;
+  font-weight: 700
+}
+.about__desc {
+  color: var(--color-light-grey);
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: var(--space-medium);
+  line-height: 28px
+}
+.about__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 180px;
+  background: var(--gradient-primary);
+  padding: var(--space-small) var(--space-medium);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: var(--space-medium);
+  font-size: 18px;
+  font-weight: 700
+}
