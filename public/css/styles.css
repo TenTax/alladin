@@ -72,17 +72,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   padding: var(--space-small) 0;
   -webkit-box-shadow: var(--shadow-header);
   box-shadow: var(--shadow-header);
-  background-color: var(--color-white);
-  z-index: 1
+  background-color: var(--color-white)
 }
 .header__menu {
   display: -webkit-box;
@@ -254,6 +250,11 @@ body {
   font-weight: 700;
   margin-top: var(--space-large);
   margin-bottom: var(--space-small)
+}
+@media (min-width:992px) and (max-width:1199.98px) {
+  .sale {
+    padding-right: var(--space-medium)
+  }
 }
 .timeout {
   display: -webkit-box;
@@ -527,6 +528,11 @@ body {
   -webkit-box-shadow: var(--shadow-base);
   box-shadow: var(--shadow-base)
 }
+@media (min-width:992px) and (max-width:1199.98px) {
+  .cart {
+    max-width: 280px
+  }
+}
 .features {
   background-color: var(--color-light-grey)
 }
@@ -712,6 +718,11 @@ body {
   border-radius: 5px;
   font-size: 20px;
   font-weight: 700
+}
+@media (min-width:992px) and (max-width:1199.98px) {
+  .accent__item {
+    max-width: 600px
+  }
 }
 .reviews {
   background-color: var(--color-light-grey)
@@ -1008,4 +1019,9 @@ body {
 }
 .form-footer_red {
   color: var(--color-error)
+}
+@media (min-width:992px) and (max-width:1199.98px) {
+  .form-footer {
+    max-width: 300px
+  }
 }

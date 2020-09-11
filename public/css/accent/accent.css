@@ -38,3 +38,8 @@
   font-size: 20px;
   font-weight: 700
 }
+@media (min-width:992px) and (max-width:1199.98px) {
+  .accent__item {
+    max-width: 600px
+  }
+}

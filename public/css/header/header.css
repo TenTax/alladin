@@ -2,17 +2,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   padding: var(--space-small) 0;
   -webkit-box-shadow: var(--shadow-header);
   box-shadow: var(--shadow-header);
-  background-color: var(--color-white);
-  z-index: 1
+  background-color: var(--color-white)
 }
 .header__menu {
   display: -webkit-box;

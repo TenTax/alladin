@@ -108,3 +108,8 @@
   -webkit-box-shadow: var(--shadow-base);
   box-shadow: var(--shadow-base)
 }
+@media (min-width:992px) and (max-width:1199.98px) {
+  .cart {
+    max-width: 280px
+  }
+}

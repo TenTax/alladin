@@ -156,3 +156,8 @@
 .form-footer_red {
   color: var(--color-error)
 }
+@media (min-width:992px) and (max-width:1199.98px) {
+  .form-footer {
+    max-width: 300px
+  }
+}
