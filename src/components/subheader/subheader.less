@@ -2,12 +2,31 @@
 .subheader {
 
     &__box {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:    "call company icons";
         padding: var(--space-medium) 0;
     }
 
     &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__call {
+        grid-area: call;
+        justify-content: flex-start;
+    }
+
+    &__company {
+        grid-area: company;
+        justify-content: center;
+    }
+
+    &__icons {
+        grid-area: icons;
+        justify-content: flex-end;
     }
 }
 
@@ -60,6 +79,7 @@
         font-weight: 600;
         font-size: 20px;
         margin-top: var(--space-extra-small);
+        text-align: center;
     }
 }
 
@@ -90,5 +110,17 @@
 
     &__item:last-child {
         margin-right: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .subheader {
+        &__box {
+            grid-row-gap: var(--space-medium); 
+            grid-template-rows: auto auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:    "company company"
+                                    "call    icons";
+        }
     }
 }

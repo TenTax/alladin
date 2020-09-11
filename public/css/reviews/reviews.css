@@ -133,3 +133,15 @@
 .slider__navitem_active {
   background-color: var(--color-primary)
 }
+@media (min-width:768px) and (max-width:991.98px) {
+  .slider__cart {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  .slider__img {
+    width: 100%;
+    height: 300px
+  }
+}
