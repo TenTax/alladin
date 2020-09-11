@@ -3,6 +3,7 @@
   --color-extra-dark: #222;
   --color-white: #fff;
   --color-primary: #ee8013;
+  --color-light-primary: #ffd300;
   --color-medium-grey: #eaeaea;
   --color-light-grey: #f5e6e8;
   --color-dark-grey: #555;
@@ -647,6 +648,46 @@ body {
 .gallery__circle:hover,
 .gallery__circle_active {
   background-color: var(--color-primary)
+}
+.accent {
+  background: var(--gradient-primary)
+}
+.accent__box {
+  padding: var(--space-extra-large) 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.accent__item {
+  max-width: 800px
+}
+.accent__title {
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 40px
+}
+.accent__desc {
+  color: var(--color-white);
+  font-weight: 400;
+  line-height: 26px;
+  font-size: 18px;
+  margin-top: var(--space-small)
+}
+.accent__button {
+  color: var(--color-dark);
+  background-color: var(--color-light-primary);
+  text-decoration: none;
+  display: block;
+  padding: var(--space-small) var(--space-medium);
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700
 }
 .reviews {
   background-color: var(--color-light-grey)
