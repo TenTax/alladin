@@ -1,3 +1,6 @@
+.subheader {
+  overflow: hidden
+}
 .subheader__box {
   display: -ms-grid;
   display: grid;
@@ -39,6 +42,43 @@
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end
+}
+@media (max-width:575.98px) {
+  .subheader__box {
+    grid-row-gap: var(--space-medium);
+    -ms-grid-rows: auto var(--space-medium) auto;
+    grid-template-rows: auto auto;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "company" "call" "icons"
+  }
+  .subheader__call {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+  }
+  .subheader__company {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+  }
+  .subheader__icons {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+  }
+  .subheader__call {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1
+  }
+  .subheader__company {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1
+  }
+  .subheader__icons {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1
+  }
 }
 @media (min-width:576px) and (max-width:767.98px) {
   .subheader__box {
@@ -140,7 +180,8 @@
 .company__name {
   color: var(--color-dark);
   font-size: 30px;
-  font-weight: 700
+  font-weight: 700;
+  text-align: center
 }
 .company__desc {
   color: var(--color-primary);

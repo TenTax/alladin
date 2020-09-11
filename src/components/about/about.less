@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    overflow: hidden;
     // background-attachment: fixed;
 
     &__box {
@@ -46,6 +47,33 @@
 
     &__button:hover {
         opacity: 0.9;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .about {
+        &__box {
+            margin: 0 -20px;
+            padding: 0;
+        }
+
+        &__banner {
+            width: 100%;
+            padding: var(--space-extra-large) var(--space-small);
+        }
+    
+        &__title {
+            font-size: 35px;
+        }
+    
+        &__desc {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    
+        &__button {
+            font-size: 16px;
+        }
     }
 }
 

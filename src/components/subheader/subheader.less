@@ -1,5 +1,6 @@
 // section subheader
 .subheader {
+    overflow: hidden;
 
     &__box {
         display: grid;
@@ -27,6 +28,31 @@
     &__icons {
         grid-area: icons;
         justify-content: flex-end;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .subheader {
+        &__box {
+            grid-row-gap: var(--space-medium); 
+            grid-template-rows: auto auto;
+            grid-template-columns: 1fr;
+            grid-template-areas:    "company"
+                                    "call"
+                                    "icons";
+        }
+
+        &__call {
+            justify-content: center;
+        }
+    
+        &__company {
+            justify-content: center;
+        }
+    
+        &__icons {
+            justify-content: center;
+        }
     }
 }
 
@@ -96,6 +122,7 @@
         color: var(--color-dark);
         font-size: 30px;
         font-weight: 700;
+        text-align: center;
     }
 
     &__desc {

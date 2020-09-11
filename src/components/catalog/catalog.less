@@ -1,5 +1,6 @@
 // section catalog
 .catalog {
+    overflow: hidden;
 
     &__box {
         padding: var(--space-extra-large) 0;
@@ -28,6 +29,26 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .catalog {
+    
+        &__title {
+            font-size: 30px;
+        }
+    
+        &__desc {
+            font-size: 18px;
+            margin-bottom: var(--space-small);
+        }
+    
+        &__carts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 }
 
@@ -110,6 +131,14 @@
     &:hover {
         transform: scale(1.005);
         box-shadow: var(--shadow-base);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .cart {
+        max-width: 100%;
+        width: 100%;
+        margin: var(--space-extra-small) 0;
     }
 }
 

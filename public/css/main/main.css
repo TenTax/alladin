@@ -4,7 +4,8 @@
   background-image: linear-gradient(to top,rgba(0,0,0,.6),rgba(0,0,0,.6)),url(../images/bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover
+  background-size: cover;
+  overflow: hidden
 }
 .main__box {
   display: -webkit-box;
@@ -20,6 +21,21 @@
 }
 .main__item {
   max-width: 600px
+}
+@media (max-width:575.98px) {
+  .main__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  .main__item {
+    max-width: 100%;
+    width: 100%
+  }
+  .main__item:nth-child(2) {
+    margin-top: var(--space-large)
+  }
 }
 @media (min-width:576px) and (max-width:767.98px) {
   .main__box {
@@ -68,6 +84,17 @@
   font-weight: 700;
   margin-top: var(--space-large);
   margin-bottom: var(--space-small)
+}
+@media (max-width:575.98px) {
+  .sale__title {
+    font-size: 30px
+  }
+  .sale__desc {
+    font-size: 16px
+  }
+  .sale__timeout {
+    font-size: 14px
+  }
 }
 @media (min-width:576px) and (max-width:767.98px) {
   .sale {
@@ -126,6 +153,16 @@
   font-weight: 400;
   color: var(--color-white);
   margin-top: 3px
+}
+@media (max-width:575.98px) {
+  .timeout__booble {
+    width: 50px;
+    height: 50px;
+    font-size: 25px
+  }
+  .timeout__subbooble {
+    font-size: 12px
+  }
 }
 .form {
   background-color: var(--color-white);
@@ -194,6 +231,12 @@
 }
 .form_red {
   color: var(--color-error)
+}
+@media (max-width:575.98px) {
+  .form {
+    max-width: 100%;
+    width: 100%
+  }
 }
 @media (min-width:576px) and (max-width:767.98px) {
   .form {

@@ -1,3 +1,6 @@
+.gallery {
+  overflow: hidden
+}
 .gallery__box {
   padding: var(--space-extra-large) 0
 }
@@ -85,6 +88,29 @@
 .gallery__circle:hover,
 .gallery__circle_active {
   background-color: var(--color-primary)
+}
+@media (max-width:575.98px) {
+  .gallery__group {
+    padding: 0 var(--space-small)
+  }
+  .gallery__title {
+    font-size: 30px
+  }
+  .gallery__desc {
+    font-size: 18px
+  }
+  .gallery__photo:nth-child(2) {
+    display: none
+  }
+  .gallery__photo:nth-child(3) {
+    display: none
+  }
+  .gallery__photolast {
+    width: 100px
+  }
+  .gallery__img {
+    height: 300px
+  }
 }
 @media (min-width:576px) and (max-width:767.98px) {
   .gallery__img {

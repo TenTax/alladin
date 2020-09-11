@@ -2,7 +2,8 @@
   background-image: url(http://lp3-gr-textiles.oml.ru/thumb/2/bgxhtH9azgTZ9vBPNRiycg/1288r/d/54931803_2.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover
+  background-size: cover;
+  overflow: hidden
 }
 .about__box {
   padding: var(--space-extra-large) 0
@@ -43,6 +44,26 @@
 }
 .about__button:hover {
   opacity: .9
+}
+@media (max-width:575.98px) {
+  .about__box {
+    margin: 0 -20px;
+    padding: 0
+  }
+  .about__banner {
+    width: 100%;
+    padding: var(--space-extra-large) var(--space-small)
+  }
+  .about__title {
+    font-size: 35px
+  }
+  .about__desc {
+    font-size: 16px;
+    line-height: 22px
+  }
+  .about__button {
+    font-size: 16px
+  }
 }
 @media (min-width:576px) and (max-width:767.98px) {
   .about__title {

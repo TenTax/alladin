@@ -1,5 +1,6 @@
 // section features
 .features {
+    overflow: hidden;
     background-color: var(--color-light-grey);
 
     &__box {
@@ -47,6 +48,24 @@
         margin-top: var(--space-extra-small);
         text-align: center;
         line-height: 26px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .features {
+        &__title {
+            font-size: 30px;
+        }
+
+        &__group {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__cart {
+            max-width: 350px;
+            width: 100%;
+        }
     }
 }
 

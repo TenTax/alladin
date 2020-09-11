@@ -1,3 +1,6 @@
+.actions {
+  overflow: hidden
+}
 .actions__box {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -1,17 +1,18 @@
 // section header
 .header {
-    display: flex;
     // position: sticky;
     // top: 0;
-    justify-content: center;
-    padding: var(--space-small) 0;
     box-shadow: var(--shadow-header);
     background-color: var(--color-white);
+    overflow: hidden;
     // z-index: 1;
 
     &__menu {
         display: flex;
+        justify-content: center;
+        padding: var(--space-small) 0;
         list-style: none;
+        width: 100%;
     }
 
     &__link {
@@ -25,5 +26,11 @@
     &__link:hover {
         transform: translateY(-1px);
         color: var(--color-primary);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .header {
+       display: none;
     }
 }

@@ -1,6 +1,7 @@
 // section accent
 .accent {
     background: var(--gradient-primary);
+    overflow: hidden;
 
     &__box {
         padding: var(--space-extra-large) 0;
@@ -36,6 +37,29 @@
         border-radius: 5px;
         font-size: 20px;
         font-weight: 700;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .accent {
+        &__box {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__title {
+            font-size: 35px;
+        }
+    
+        &__desc {
+            line-height: 22px;
+            font-size: 16px;
+        }
+        
+        &__button {
+            font-size: 16px;
+            margin-top: var(--space-small);
+        }
     }
 }
 

@@ -1,3 +1,6 @@
+.brands {
+  overflow: hidden
+}
 .brands__box {
   display: -webkit-box;
   display: -ms-flexbox;

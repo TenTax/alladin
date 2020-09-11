@@ -1,6 +1,7 @@
 .maps {
   margin-bottom: -2px;
-  height: 450px
+  height: 450px;
+  overflow: hidden
 }
 @media (min-width:576px) and (max-width:767.98px) {
   .maps {

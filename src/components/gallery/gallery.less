@@ -1,5 +1,6 @@
 // section gallery
 .gallery {
+    overflow: hidden;
 
     &__box {
         padding: var(--space-extra-large) 0;
@@ -76,6 +77,38 @@
 
     &__circle_active, &__circle:hover {
         background-color: var(--color-primary);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .gallery {
+        &__group {
+            padding: 0 var(--space-small);
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+    
+        &__desc {
+            font-size: 18px;
+        }
+
+        &__photo:nth-child(2) {
+            display: none;
+        }
+
+        &__photo:nth-child(3) {
+            display: none;
+        }
+
+        &__photolast {
+            width: 100px;
+        }
+
+        &__img {
+            height: 300px;
+        }
     }
 }
 
