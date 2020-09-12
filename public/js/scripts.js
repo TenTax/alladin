@@ -2,33 +2,33 @@ const ROOT_TIME = document.getElementById('time');
 const ROOT_MODAL = document.getElementById('modal');
 
 const renderTime = (days, hours, minutes, secounds) => {
-    ROOT_TIME.innerHTML = `
+  ROOT_TIME.innerHTML = `
     <div class="timeout__item">
-        <div class="timeout__booble">${ days }</div>
+        <div class="timeout__booble">${days}</div>
         <div class="timeout__subbooble">Дней</div>
     </div>
     <div class="timeout__item">
-        <div class="timeout__booble">${ hours }</div>
+        <div class="timeout__booble">${hours}</div>
         <div class="timeout__subbooble">Часов</div>
     </div>
     <div class="timeout__item">
-        <div class="timeout__booble">${ minutes }</div>
+        <div class="timeout__booble">${minutes}</div>
         <div class="timeout__subbooble">Минут</div>
     </div>
     <div class="timeout__item">
-        <div class="timeout__booble">${ secounds }</div>
+        <div class="timeout__booble">${secounds}</div>
         <div class="timeout__subbooble">Секунд</div>
     </div>
     `;
-}
+};
 
 setInterval(() => {
-    const date = new Date();
-    renderTime(date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds());
+  const date = new Date();
+  renderTime(date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds());
 }, 1000);
 
 const GalleryComponent = () => {
-    return (`
+  return `
         <div class="gallery-modal">
             <div class="gallery-modal__item">
                 <img src="http://lp3-stylish-curtains.oml.ru/thumb/2/ytXolYNW_lZGN5gTgx711A/r556/d/54687699_2.jpg" alt=""  class="gallery-modal__img">
@@ -46,48 +46,40 @@ const GalleryComponent = () => {
                 <img src="http://lp3-stylish-curtains.oml.ru/thumb/2/ytXolYNW_lZGN5gTgx711A/r556/d/54687699_2.jpg" alt=""  class="gallery-modal__img">
             </div>
         </div>
-    `);
-}
+    `;
+};
 
 const renderModal = (param, id) => {
-    ROOT_MODAL.innerHTML = `
+  ROOT_MODAL.innerHTML = `
         <div class="modal__root">
             <div class="modal__close" onclick="closeModal()"><i class="fas fa-times"></i></div>
             <div class="modal__content">
-                ${
-                    param == 'gallery'
-                    ? GalleryComponent()
-                    : 'nobody'
-                }
+                ${param == 'gallery' ? GalleryComponent() : 'nobody'}
             </div>
         </div>
     `;
-
-    $('.gallery-modal').slick({
-        prevArrow: '<div class="gallery-modal__prev"><i class="fas fa-chevron-left"></i></div>',
-        nextArrow: '<div class="gallery-modal__next"><i class="fas fa-chevron-right"></i></div>',
-        centerMode: true,
-        dots: false,
-        arrows: true,
-        centerPadding: '0px',
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: id,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false
-                }
-            }
-        ]
-    });
-}
+  $('.gallery-modal').slick({
+    prevArrow: '<div class="gallery-modal__prev"><i class="fas fa-chevron-left"></i></div>',
+    nextArrow: '<div class="gallery-modal__next"><i class="fas fa-chevron-right"></i></div>',
+    centerMode: true,
+    dots: false,
+    arrows: true,
+    centerPadding: '0px',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: id,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        arrows: false
+      }
+    }]
+  });
+};
 
 const closeModal = () => {
-    ROOT_MODAL.innerHTML = '';
-}
-
+  ROOT_MODAL.innerHTML = '';
+};
 
 
 
