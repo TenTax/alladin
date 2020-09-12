@@ -118,8 +118,19 @@
     flex-direction: column;
     align-items: center;
 
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-left: -25px;
+    }
+
+    &__logo {
+        width: 40px;
+        margin-right: var(--space-small);
+    }
+
     &__name {
-        color: var(--color-dark);
+        color: var(--color-dark-grey);
         font-size: 30px;
         font-weight: 700;
         text-align: center;
@@ -151,7 +162,7 @@
         height: 48px;
         color: var(--color-dark);
         background-color: var(--color-medium-grey);
-        font-size: 20px;
+        font-size: 23px;
         border-radius: 50%;
     }
 

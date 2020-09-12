@@ -297,8 +297,21 @@ body {
   -ms-flex-align: center;
   align-items: center
 }
+.company__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: -25px
+}
+.company__logo {
+  width: 40px;
+  margin-right: var(--space-small)
+}
 .company__name {
-  color: var(--color-dark);
+  color: var(--color-dark-grey);
   font-size: 30px;
   font-weight: 700;
   text-align: center
@@ -334,7 +347,7 @@ body {
   height: 48px;
   color: var(--color-dark);
   background-color: var(--color-medium-grey);
-  font-size: 20px;
+  font-size: 23px;
   border-radius: 50%
 }
 .icons__item:first-child {
@@ -1520,20 +1533,22 @@ body {
   border-radius: 50%;
   margin: 0 var(--space-extra-small);
   text-decoration: none;
-  font-size: 16px
+  font-size: 18px
 }
 .social__circle:nth-child(1) {
-  background-color: #4c6c90;
+  background-color: #7f509e;
   margin-left: 0
 }
 .social__circle:nth-child(2) {
-  background-color: #55abed
+  background-color: #33d951
 }
 .social__circle:nth-child(3) {
-  background-color: #3b5997
+  background-color: #28a7ea
 }
 .social__circle:nth-child(4) {
-  background-color: #f58534;
+  background: -webkit-gradient(linear,right top,left top,from(#da1945),to(#f8cd02));
+  background: -o-linear-gradient(right,#da1945,#f8cd02);
+  background: linear-gradient(to left,#da1945,#f8cd02);
   margin-right: 0
 }
 .form-footer {

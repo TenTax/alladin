@@ -98,20 +98,22 @@
   border-radius: 50%;
   margin: 0 var(--space-extra-small);
   text-decoration: none;
-  font-size: 16px
+  font-size: 18px
 }
 .social__circle:nth-child(1) {
-  background-color: #4c6c90;
+  background-color: #7f509e;
   margin-left: 0
 }
 .social__circle:nth-child(2) {
-  background-color: #55abed
+  background-color: #33d951
 }
 .social__circle:nth-child(3) {
-  background-color: #3b5997
+  background-color: #28a7ea
 }
 .social__circle:nth-child(4) {
-  background-color: #f58534;
+  background: -webkit-gradient(linear,right top,left top,from(#da1945),to(#f8cd02));
+  background: -o-linear-gradient(right,#da1945,#f8cd02);
+  background: linear-gradient(to left,#da1945,#f8cd02);
   margin-right: 0
 }
 .form-footer {
