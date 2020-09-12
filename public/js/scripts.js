@@ -12,6 +12,8 @@ $(document).ready(function(){
         appendDots: $('.gallery__nav'),
         centerMode: true,
         dots: true,
+        focusOnSelect: true,
+        pauseOnHover: false,
         arrows: true,
         centerPadding: '80px',
         slidesToShow: 3,
@@ -41,6 +43,28 @@ $(document).ready(function(){
                     arrows: false,
                     centerPadding: '0',
                     slidesToShow: 1
+                }
+            }
+        ]
+    });
+    $('.carousel__box').slick({
+        prevArrow: '<div class="carousel__prev"><i class="fas fa-chevron-left"></i></div>',
+        nextArrow: '<div class="carousel__next"><i class="fas fa-chevron-right"></i></div>',
+        appendDots: $('.carousel__dots'),
+        centerMode: true,
+        dots: true,
+        arrows: true,
+        centerPadding: '0px',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: false,
+        responsive: [
+            {
+                breakpoint: 576,
+                settings: {
+                    arrows: false
                 }
             }
         ]

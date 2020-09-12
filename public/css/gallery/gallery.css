@@ -98,7 +98,7 @@
     height: 300px
   }
 }
-.slick-dots {
+.gallery .slick-dots {
   display: -webkit-box!important;
   display: -ms-flexbox!important;
   display: flex!important;
@@ -108,7 +108,7 @@
   justify-content: center;
   margin-top: var(--space-medium)
 }
-.slick-dots button {
+.gallery .slick-dots button {
   background-color: var(--color-dark-grey);
   width: 15px;
   height: 15px;
@@ -125,11 +125,11 @@
   border: none;
   color: var(--color-dark-grey)
 }
-.slick-dots .slick-active button {
+.gallery .slick-active button {
   background-color: var(--color-primary);
   color: var(--color-primary)
 }
-.slick-arrow {
+.gallery .slick-arrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,29 +150,29 @@
   -o-transition: color .3s;
   transition: color .3s
 }
-.slick-arrow:hover {
+.gallery .slick-arrow:hover {
   color: var(--color-primary)
 }
-.slick-prev {
+.gallery .slick-prev {
   top: 0;
   left: 0
 }
-.slick-next {
+.gallery .slick-next {
   top: 0;
   right: 0
 }
-.slick-active {
+.gallery .slick-active:focus {
   outline: 0!important;
   border: none!important
 }
 @media (min-width:576px) and (max-width:767.98px) {
-  .slick-arrow {
+  .gallery .slick-arrow {
     width: 30px;
     font-size: 25px
   }
 }
 @media (min-width:768px) and (max-width:991.98px) {
-  .slick-arrow {
+  .gallery .slick-arrow {
     width: 50px;
     font-size: 35px
   }
