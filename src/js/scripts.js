@@ -1,4 +1,31 @@
+const ROOT_TIME = document.getElementById('time');
 const ROOT_MODAL = document.getElementById('modal');
+
+const renderTime = (days, hours, minutes, secounds) => {
+    ROOT_TIME.innerHTML = `
+    <div class="timeout__item">
+        <div class="timeout__booble">${ days }</div>
+        <div class="timeout__subbooble">Дней</div>
+    </div>
+    <div class="timeout__item">
+        <div class="timeout__booble">${ hours }</div>
+        <div class="timeout__subbooble">Часов</div>
+    </div>
+    <div class="timeout__item">
+        <div class="timeout__booble">${ minutes }</div>
+        <div class="timeout__subbooble">Минут</div>
+    </div>
+    <div class="timeout__item">
+        <div class="timeout__booble">${ secounds }</div>
+        <div class="timeout__subbooble">Секунд</div>
+    </div>
+    `;
+}
+
+setInterval(() => {
+    const date = new Date();
+    renderTime(date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds());
+}, 1000);
 
 const GalleryComponent = () => {
     return (`
