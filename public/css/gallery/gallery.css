@@ -35,12 +35,6 @@
   margin: 0 var(--space-extra-small);
   cursor: pointer
 }
-.gallery__photolast {
-  width: 200px;
-  overflow: hidden;
-  margin: 0 var(--space-extra-small);
-  opacity: .3
-}
 .gallery__img {
   -webkit-transition-duration: .3s;
   -o-transition-duration: .3s;
@@ -70,24 +64,6 @@
   -ms-flex-pack: center;
   justify-content: center;
   margin-top: var(--space-medium)
-}
-.gallery__circle {
-  background-color: var(--color-dark-grey);
-  width: 15px;
-  height: 15px;
-  margin: 0 var(--space-super-small);
-  border-radius: 50%;
-  cursor: pointer;
-  -webkit-transition-property: background-color;
-  -o-transition-property: background-color;
-  transition-property: background-color;
-  -webkit-transition-duration: .3s;
-  -o-transition-duration: .3s;
-  transition-duration: .3s
-}
-.gallery__circle:hover,
-.gallery__circle_active {
-  background-color: var(--color-primary)
 }
 @media (max-width:575.98px) {
   .gallery__group {
@@ -120,5 +96,84 @@
 @media (min-width:768px) and (max-width:991.98px) {
   .gallery__img {
     height: 300px
+  }
+}
+.slick-dots {
+  display: -webkit-box!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+  list-style: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: var(--space-medium)
+}
+.slick-dots button {
+  background-color: var(--color-dark-grey);
+  width: 15px;
+  height: 15px;
+  margin: 0 var(--space-super-small);
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition-property: background-color,color;
+  -o-transition-property: background-color,color;
+  transition-property: background-color,color;
+  -webkit-transition-duration: .3s;
+  -o-transition-duration: .3s;
+  transition-duration: .3s;
+  outline: 0;
+  border: none;
+  color: var(--color-dark-grey)
+}
+.slick-dots .slick-active button {
+  background-color: var(--color-primary);
+  color: var(--color-primary)
+}
+.slick-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgba(255,255,255,.5);
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 70px;
+  cursor: pointer;
+  font-size: 40px;
+  -webkit-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s
+}
+.slick-arrow:hover {
+  color: var(--color-primary)
+}
+.slick-prev {
+  top: 0;
+  left: 0
+}
+.slick-next {
+  top: 0;
+  right: 0
+}
+.slick-active {
+  outline: 0!important;
+  border: none!important
+}
+@media (min-width:576px) and (max-width:767.98px) {
+  .slick-arrow {
+    width: 30px;
+    font-size: 25px
+  }
+}
+@media (min-width:768px) and (max-width:991.98px) {
+  .slick-arrow {
+    width: 50px;
+    font-size: 35px
   }
 }

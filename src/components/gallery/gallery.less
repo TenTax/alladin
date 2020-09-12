@@ -38,13 +38,6 @@
         cursor: pointer;
     }
 
-    &__photolast {
-        width: 200px;
-        overflow: hidden;
-        margin: 0 var(--space-extra-small);
-        opacity: 0.3;
-    }
-
     &__img {
         transition-duration: 0.3s;
         transition-property: transform;
@@ -62,21 +55,6 @@
         display: flex;
         justify-content: center;
         margin-top: var(--space-medium);
-    }
-
-    &__circle {
-        background-color: var(--color-dark-grey);
-        width: 15px;
-        height: 15px;
-        margin: 0 var(--space-super-small);
-        border-radius: 50%;
-        cursor: pointer;
-        transition-property: background-color;
-        transition-duration: 0.3s;
-    }
-
-    &__circle_active, &__circle:hover {
-        background-color: var(--color-primary);
     }
 }
 
@@ -124,6 +102,88 @@
     .gallery {
         &__img {
             height: 300px;
+        }
+    }
+}
+
+
+
+// slick
+.slick {
+    &-dots {
+        display: flex !important;
+        list-style: none;
+        justify-content: center;
+        margin-top: var(--space-medium);
+    }
+
+    &-dots button {
+        background-color: var(--color-dark-grey);
+        width: 15px;
+        height: 15px;
+        margin: 0 var(--space-super-small);
+        border-radius: 50%;
+        cursor: pointer;
+        transition-property: background-color, color;
+        transition-duration: 0.3s;
+        outline: none;
+        border: none;
+        color: var(--color-dark-grey);
+    }
+
+    &-dots &-active button {
+        background-color: var(--color-primary);
+        color: var(--color-primary);
+    }
+
+    &-arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        width: 70px;
+        cursor: pointer;
+        font-size: 40px;
+        transition: color 0.3s;
+    }
+
+    &-arrow:hover {
+        color: var(--color-primary);
+    }
+
+    &-prev {
+        top: 0;
+        left: 0;
+    }
+
+    &-next {
+        top: 0;
+        right: 0;
+    }
+
+    &-active {
+        outline: none !important;
+        border: none !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .slick {
+        &-arrow {
+            width: 30px;
+            font-size: 25px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .slick {
+        &-arrow {
+            width: 50px;
+            font-size: 35px;
         }
     }
 }
