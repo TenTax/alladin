@@ -104,6 +104,32 @@ function GalleryComponent() {
     `);
 }
 
+function FormComponent() {
+    return (`
+        <div class="form-modal">
+            <div class="form-modal__name">Заказать звонок</div>
+            <div class="form-modal__desc">Введите данные для заказа обратного звонка</div>
+            <div class="form-modal__group">
+                <div class="form-modal__title"><span class="form-modal_red">*</span> Имя</div>
+                <input type="text" class="form-modal__input">
+            </div>
+            <div class="form-modal__group">
+                <div class="form-modal__title"><span class="form-modal_red">*</span> Телефон</div>
+                <input type="text" class="form-modal__input">
+            </div>
+            <div class="form-modal__group">
+                <input type="checkbox" checked id="form-modal__checkbox" class="form-modal__checkbox">
+                <label for="form-modal__checkbox" class="form-modal__label">
+                    <span class="form-modal_red">*</span> 
+                    <span>Я согласен на обработку моих </span>
+                    <a href="#" class="form-modal__link">персональных данных</a>
+                </label>
+            </div>
+            <button class="form-modal__button">Получить скидку</button>
+        </div>
+    `);
+}
+
 function renderModal(param, id) {
     ROOT_MODAL.innerHTML = `
         <div class="modal__root">
@@ -112,7 +138,7 @@ function renderModal(param, id) {
                 ${
                     param == 'gallery'
                     ? GalleryComponent()
-                    : 'nobody'
+                    : FormComponent()
                 }
             </div>
         </div>

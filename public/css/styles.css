@@ -1739,3 +1739,113 @@ body {
   color: var(--color-white);
   border-radius: 5px
 }
+.form-modal {
+  background-color: var(--color-white);
+  padding: var(--space-large);
+  border-radius: 5px
+}
+.form-modal__name {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-dark)
+}
+.form-modal__desc {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-dark);
+  margin-top: var(--space-small);
+  margin-bottom: var(--space-medium)
+}
+.form-modal__group {
+  margin-bottom: var(--space-medium)
+}
+.form-modal__title {
+  color: var(--color-dark);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: var(--space-extra-small)
+}
+.form-modal__input {
+  padding: 12px 16px;
+  width: 100%;
+  border: 1px solid var(--color-medium-grey);
+  border-radius: 5px;
+  outline: 0;
+  font-size: 16px;
+  line-height: 26px
+}
+.form-modal__input:focus {
+  background-color: var(--color-medium-grey)
+}
+.form-modal__input:hover {
+  background-color: var(--color-medium-grey)
+}
+.form-modal__checkbox {
+  width: 15px;
+  height: 15px;
+  cursor: pointer
+}
+.form-modal__label {
+  color: var(--color-dark-grey);
+  font-weight: 400;
+  line-height: 26px
+}
+.form-modal__link {
+  color: var(--color-info)
+}
+.form-modal__button {
+  width: 100%;
+  border: none;
+  background: var(--gradient-primary);
+  border-radius: 5px;
+  padding: 12px 16px;
+  line-height: 26px;
+  outline: 0;
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition-duration: var(--duration-base);
+  -o-transition-duration: var(--duration-base);
+  transition-duration: var(--duration-base);
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity
+}
+.form-modal__button:hover {
+  opacity: .9
+}
+.form-modal_red {
+  color: var(--color-error)
+}
+@media (max-width:575.98px) {
+  .form-modal {
+    width: 100%;
+    padding: var(--space-small)
+  }
+  .form-modal__name {
+    font-size: 18px;
+    margin-bottom: var(--space-small)
+  }
+  .form-modal__desc {
+    display: none
+  }
+  .form-modal__button {
+    padding: 8px 16px;
+    line-height: 20px;
+    font-size: 14px
+  }
+  .form-modal__label {
+    font-size: 12px;
+    line-height: 16px
+  }
+  .form-modal__input {
+    padding: 8px 16px;
+    font-size: 14px
+  }
+  .form-modal__group {
+    margin-bottom: var(--space-small)
+  }
+}

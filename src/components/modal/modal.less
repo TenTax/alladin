@@ -98,3 +98,132 @@
         border-radius: 5px;
     }
 }
+
+// form-modal
+.form-modal {
+    background-color: var(--color-white);
+    padding: var(--space-large);
+    border-radius: 5px;
+
+    &__name {
+        text-align: center;
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--color-dark);
+    }
+
+    &__desc {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--color-dark);
+        margin-top: var(--space-small);
+        margin-bottom: var(--space-medium);
+    }
+
+    &__group {
+        margin-bottom: var(--space-medium);
+    }
+
+    &__title {
+        color: var(--color-dark);
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: var(--space-extra-small);
+    }
+
+    &__input {
+        padding: 12px 16px;
+        width: 100%;
+        border: 1px solid var(--color-medium-grey);
+        border-radius: 5px;
+        outline: none;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    &__input:focus {
+        background-color: var(--color-medium-grey);
+    }
+
+    &__input:hover {
+        background-color: var(--color-medium-grey);
+    }
+
+    &__checkbox {
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+    }
+
+    &__label {
+        color: var(--color-dark-grey);
+        font-weight: 400;
+        line-height: 26px;
+    }
+
+    &__link {
+        // text-decoration: solid;
+        color: var(--color-info);
+    }
+
+    &__button {
+        width: 100%;
+        border: none;
+        background: var(--gradient-primary);
+        border-radius: 5px;
+        padding: 12px 16px;
+        line-height: 26px;
+        outline: none;
+        color: var(--color-white);
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        transition-duration: var(--duration-base);
+        transition-property: opacity;
+    }
+
+    &__button:hover {
+        opacity: 0.9;
+    }
+
+    &_red {
+        color: var(--color-error);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .form-modal {
+        width: 100%;
+        padding: var(--space-small);
+
+        &__name {
+            font-size: 18px;
+            margin-bottom: var(--space-small);
+        }
+    
+        &__desc {
+            display: none;
+        }
+
+        &__button {
+            padding: 8px 16px;
+            line-height: 20px;
+            font-size: 14px;
+        }
+
+        &__label {
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        &__input {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+
+        &__group {
+            margin-bottom: var(--space-small);
+        }
+    }
+}
