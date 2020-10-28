@@ -1,17 +1,6 @@
-# Настройка Gulp для одностраничных сайтов (фронтенд)
+# Учебный проект alladin
 
-Структура sourse:
-
-* img
-* js
-    * modules
-    * main.js
-* less
-* trash
-    * favicon.ico
-    * robots.txt
-* partials
-* index.html
+Рабочий сайт: Локальный сервер
 
 
 
