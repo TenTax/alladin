@@ -1,40 +1,35 @@
 .container {
-    max-width: 1380px;
-    margin   : 0 auto;
-    padding  : 0 20px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
-// phone
-@media (max-width:575.98px) {
+@media (max-width: 575.98px) {
     .container {
-        max-width: 100%;
+        width: 100%;
+        padding: 0 var(--space-small);
     }
 }
 
-// reverse phone
-@media (min-width:576px) and (max-width:767.98px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
     .container {
-        max-width: 540px;
+        width: 540px;
     }
 }
 
-// tablet
-@media (min-width:768px) and (max-width:991.98px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
     .container {
-        max-width: 720px;
+        width: 720px;
     }
 }
 
-// middle
-@media (min-width:992px) and (max-width:1199.98px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
     .container {
-        max-width: 960px;
+        width: 960px;
     }
 }
 
-// large
-@media (min-width:1200px) and (max-width:1420px) {
+@media (min-width: 1200px) {
     .container {
-        max-width: 1140px;
+        width: 1140px;
     }
 }

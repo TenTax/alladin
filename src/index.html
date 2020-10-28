@@ -3,14 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galpo cool</title>
+    <meta name="robots" content="noindex, nofollow"/>
+
+    <title>Alladin</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <link rel="stylesheet" href="main.css">
 </head>
-<body>
-    Galpo
-
+<body id="sale">
     {% include './partials/header.html' %}
 
-    <script src="main.js"></script>
+    {% include './partials/subheader.html' %}
+
+    {% include './partials/main.html' %}
+
+    {% include './partials/catalog.html' %}
+
+    {% include './partials/features.html' %}
+
+    {% include './partials/about.html' %}
+
+    {% include './partials/accent.html' %}
+
+    {% include './partials/gallery.html' %}
+
+    {% include './partials/reviews.html' %}
+
+    {% include './partials/maps.html' %}
+
+    {% include './partials/footer.html' %}
+
+    {% include './partials/modal.html' %}
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+
+    <script src="main.js" type="text/javascript"></script>
 </body>
 </html>

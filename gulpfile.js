@@ -148,7 +148,7 @@ function startWatch() {
     online: true
   });
 
-  watch(['./src/*.html', './src/twig-partials/**/*.html'], html);
+  watch(['./src/*.html', './src/partials/**/*.html'], html);
   watch('./src/less/**/*.less', styles);
   watch('./src/js/**/*.js', scripts);
   watch('./src/img/**/*.*', images);
