@@ -1,35 +1,36 @@
 {
-  "name": "class_teacher",
+  "name": "gulpo",
   "version": "1.0.0",
-  "description": "Шаблоны страниц сайта Class-Teacher.ru",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TenTax/class_teacher.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TenTax/class_teacher/issues"
-  },
-  "homepage": "https://github.com/TenTax/class_teacher#readme",
+  "browserslist": [
+    "> 1%",
+    "not dead"
+  ],
   "devDependencies": {
-    "browser-sync": "^2.26.12",
-    "del": "^5.1.0",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.13",
+    "core-js": "^3.6.5",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
-    "gulp-file-include": "^2.2.2",
     "gulp-html-beautify": "^1.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-less": "^4.0.1",
-    "gulp-newer": "^1.4.0"
-  },
-  "dependencies": {
-    "gulp-twig": "^1.2.0"
+    "gulp-newer": "^1.4.0",
+    "gulp-twig": "^1.2.0",
+    "webpack": "^5.2.0",
+    "webpack-stream": "^6.1.0"
   }
 }

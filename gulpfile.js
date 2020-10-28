@@ -1,121 +1,177 @@
-// MAIN REQUIRED
-const {src, dest, parallel, watch} = require('gulp');
+const { src, dest, parallel, watch } = require('gulp');
 
-const fileinclude = require('gulp-file-include');
-const twig = require('gulp-twig');
+const browserSync = require('browser-sync').create();
 const del = require('del');
 
-// Browser-sync
-const browserSync = require('browser-sync').create();
-
-function browsersync() {
-    browserSync.init({
-        server: { baseDir: 'public/' },
-        notify: true,
-        online: true
-    });
-}
-
-exports.browsersync = browsersync;
-
-
-
-
-
-// Images
-const imagemin = require('gulp-imagemin');
-const newer = require('gulp-newer');
-
-function images() {
-    return src('src/images/**/*')
-    .pipe(newer('public/images/**/*'))
-    .pipe(imagemin())
-    .pipe(dest('public/images/'))
-}
-
-function cleanImg() {
-    return del(('public/images/**/*', { force: true }));
-}
-
-exports.images = images;
-exports.cleanImg = cleanImg;
-
-
-
-
-
-// HTMLS
+const twig = require('gulp-twig');
 const htmlBeautify = require('gulp-html-beautify');
-function htmls() {
-    return src('src/*.html')
+
+const less = require('gulp-less');
+const autoprefixer = require('gulp-autoprefixer');
+const cleancss = require('gulp-clean-css');
+
+const webpack = require("webpack-stream");
+
+const newer = require('gulp-newer');
+const imagemin = require('gulp-imagemin');
+
+
+const distfolder = './dist/';
+
+const buildfolder   = './build/';
+// const buildfolder = '../../OpenServer/domains/domen/';
+
+
+
+function html() {
+  return src('./src/*.html')
     .pipe(twig())
     .pipe(htmlBeautify())
-    .pipe(dest('public/'))
+    .pipe(dest(distfolder))
     .pipe(browserSync.stream())
 }
 
-exports.htmls = htmls;
-
-
-
-
-
-// Styles
-const less = require('gulp-less');
-const cleancss = require('gulp-clean-css');
-const autoprefixer = require('gulp-autoprefixer');
+function htmlBuild() {
+  return src('./src/*.html')
+    .pipe(twig())
+    .pipe(htmlBeautify())
+    .pipe(dest(buildfolder))
+}
 
 function styles() {
-    return src(['src/less/**/*.less', 'src/components/**/*.less'])
-    .pipe(fileinclude({
-        prefix: '@@',
-        basepath: '@file'
-    }))
+  return src('./src/less/main.less')
     .pipe(less())
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-    .pipe(cleancss(( { level: { 1: { specialComments: 0 } }, format: 'beautify' } )))
-    .pipe(dest('public/css/'))
+    .pipe(cleancss({ level: { 1: { specialComments: 0 } }, format: 'beautify' }))
+    .pipe(dest(distfolder))
     .pipe(browserSync.stream())
 }
 
-exports.styles = styles;
-
-
-
-
-
-// Scripts
-// const concat = require('gulp-concat');
-// const uglify = require('gulp-uglify-es').default;
+function stylesBuild() {
+  return src('./src/less/main.less')
+    .pipe(less())
+    .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
+    .pipe(cleancss({ level: { 2: {} } }))
+    .pipe(dest(buildfolder))
+}
 
 function scripts() {
-    return src('src/js/**/*.js')
-    .pipe(fileinclude({
-        prefix: '@@',
-        basepath: '@file'
+  return src('./src/js/main.js')
+    .pipe(webpack({
+      mode: 'development',
+      output: {
+        filename: 'main.js'
+      },
+      watch: false,
+      devtool: "source-map",
+      module: {
+        rules: [
+          {
+            test: /\.m?js$/,
+            exclude: /(node_modules|bower_components)/,
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: [['@babel/preset-env', {
+                  debug: true,
+                  corejs: 3,
+                  useBuiltIns: "usage"
+                }]]
+              }
+            }
+          }
+        ]
+      }
     }))
-    .pipe(dest('public/js/'))
-    .pipe(browserSync.stream())
+    .pipe(dest(distfolder))
+    .on('end', browserSync.reload)
 }
 
-exports.scripts = scripts;
+function scriptsBuild() {
+  return src('./src/js/main.js')
+    .pipe(webpack({
+      mode: 'production',
+      output: {
+        filename: 'main.js'
+      },
+      module: {
+        rules: [
+          {
+            test: /\.m?js$/,
+            exclude: /(node_modules|bower_components)/,
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: [['@babel/preset-env', {
+                  corejs: 3,
+                  useBuiltIns: "usage"
+                }]]
+              }
+            }
+          }
+        ]
+      }
+    }))
+    .pipe(dest(buildfolder))
+}
 
+function images() {
+  return src('./src/img/**/*.*')
+    .pipe(newer(distfolder))
+    .pipe(imagemin())
+    .pipe(dest(distfolder + 'img'))
+    .on('end', browserSync.reload)
+}
 
+function imagesBuild() {
+  return src('./src/img/**/*.*')
+    .pipe(newer(buildfolder))
+    .pipe(imagemin())
+    .pipe(dest(buildfolder + 'img'))
+}
 
+function copyTrash() {
+  return src('./src/trash/**/*')
+    .pipe(dest(distfolder))
+    .on('end', browserSync.reload)
+}
 
-
-// SERVICES
-function clearPublic() {
-    return del('public/**/*', { force: true })
+function copyTrashBuild() {
+  return src('./src/trash/**/*')
+    .pipe(dest(buildfolder))
 }
 
 function startWatch() {
-    watch(['src/less/**/*.less', 'src/components/**/*.less'], styles);
-    watch('src/js/**/*.js', scripts);
-    watch(['src/*.html', 'src/components/**/*.html'], htmls);
-    watch('public/**/*.html').on('change', browserSync.reload);
-    watch('src/images/**/*').on('change', images);
+  browserSync.init({
+    server: { baseDir: distfolder },
+    notify: true,
+    online: true
+  });
+
+  watch(['./src/*.html', './src/twig-partials/**/*.html'], html);
+  watch('./src/less/**/*.less', styles);
+  watch('./src/js/**/*.js', scripts);
+  watch('./src/img/**/*.*', images);
+  watch('./src/trash/**/*', copyTrash);
 }
 
-exports.clearPublic = clearPublic;
-exports.default = parallel(htmls, styles, scripts, images, browsersync, startWatch);
+function clear() {
+  return del(distfolder + '/**/*', { force: true })
+}
+
+function clearBuild() {
+  return del(buildfolder + '/**/*', { force: true })
+}
+
+function clearImages() {
+  return del(distfolder + 'img/**/*', { force: true })
+}
+
+exports.html = html;
+exports.styles = styles;
+exports.scripts = scripts;
+exports.images = images;
+exports.clear = clear;
+exports.clearImages = clearImages;
+exports.build = parallel(clearBuild, htmlBuild, stylesBuild, scriptsBuild, copyTrashBuild, imagesBuild);
+exports.default = parallel(clear, html, styles, scripts, images, copyTrash, startWatch);
