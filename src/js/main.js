@@ -1,8 +1,9 @@
-import cool from './modules/cool';
+import $ from 'jquery';
+import 'slick-carousel';
+import openGallery from './modules/openGallery';
+import slickGallery from './slick-sliders/slickGallery';
 
 window.addEventListener('DOMContentLoaded', () => {
-    const hello = 'hello';
-    console.log(hello);
-
-    cool();
+   slickGallery($);
+   openGallery();
 });
