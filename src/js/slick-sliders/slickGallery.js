@@ -8,6 +8,7 @@ const sliderGallery = ($) => {
         autoplay: true,
         autoplaySpeed: 3000,
         swipeToSlide: true,
+        touchMove: false,
         dots: true,
         appendArrows: $('.gallery__arrows'),
         appendDots: $('.gallery__dots'),
