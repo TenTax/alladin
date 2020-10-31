@@ -1,22 +1,23 @@
-const sliderGallery = ($) => {
-    $('.gallery__slider').slick({
-        adaptiveHeight: true,
-        slidesToShow: 3,
+const slickPartners = ($) => {
+    $('.partners__slider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
         speed: 300,
-        centerMode: true,
-        centerPadding: '0px',
+        dots: true,
         autoplay: true,
         autoplaySpeed: 3000,
         swipeToSlide: true,
-        dots: true,
-        appendArrows: $('.gallery__arrows'),
-        appendDots: $('.gallery__dots'),
         responsive: [
             {
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 2,
-                    centerMode: false
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
                 }
             },
             {
@@ -29,4 +30,4 @@ const sliderGallery = ($) => {
     });
 };
 
-export default sliderGallery;
+export default slickPartners;
