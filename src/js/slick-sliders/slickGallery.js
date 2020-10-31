@@ -3,6 +3,8 @@ const sliderGallery = ($) => {
         adaptiveHeight: true,
         slidesToShow: 3,
         speed: 300,
+        centerMode: true,
+        centerPadding: '0px',
         autoplay: true,
         autoplaySpeed: 3000,
         dots: true,
@@ -12,7 +14,8 @@ const sliderGallery = ($) => {
             {
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 2,
+                    centerMode: false
                 }
             },
             {

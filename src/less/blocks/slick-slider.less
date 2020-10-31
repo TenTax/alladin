@@ -1,7 +1,3 @@
-.slick-list {
-    // overflow: hidden;
-}
-
 .slick-track {
     display    : flex;
     align-items: flex-start;
@@ -31,17 +27,22 @@
     font-size       : 0;
     outline         : none;
     cursor          : pointer;
+    transition      : 0.5s;
+}
+
+.slick-arrow:hover {
+    opacity: 0.8;
 }
 
 .slick-arrow.slick-prev {
-    background-image   : url("img/left-arrow.svg");
+    background-image   : url("img/icons/left-arrow.svg");
     background-position: center center;
     background-size    : 40%;
     background-repeat  : no-repeat;
 }
 
 .slick-arrow.slick-next {
-    background-image   : url("img/right-arrow.svg");
+    background-image   : url("img/icons/right-arrow.svg");
     background-position: center center;
     background-size    : 40%;
     background-repeat  : no-repeat;
