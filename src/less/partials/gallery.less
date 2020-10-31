@@ -1,6 +1,10 @@
 // section gallery
 .gallery {
-    padding: 60px 0;
+    overflow: hidden;
+
+    &__container {
+        padding: 60px 0;
+    }
 
     &__title {
         color      : var(--color-dark);
@@ -33,7 +37,7 @@
     }
 
     &__control {
-        padding        : 15px 0;
+        padding        : 15px 8px;
         display        : flex;
         justify-content: space-between;
     }
@@ -54,8 +58,29 @@
 // phone
 @media (max-width: 575.98px) {
     .gallery {
+        &__container {
+            padding: 60px 20px;
+        }
+        &__title {
+            font-size  : 30px;
+        }
+    
+        &__desc {
+            font-size    : 16px;
+        }
+        &__control {
+            justify-content: center;
+        }
+
+        &__arrows {
+            display: none;
+        }
+
         &__img {
             height: 350px;
+        }
+        & .slick-slide {
+            margin: 0 5px;
         }
     }
 }
@@ -82,7 +107,7 @@
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .gallery {
         &__img {
-            height: 450px;
+            height: 400px;
         }
     }
 }
