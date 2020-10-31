@@ -1,3 +1,5 @@
+import { bodyLock, bodyUnLock } from "../modules/bodyLock";
+
 const slickGalleryModal = ($) => {
     const slider = $('.modal-gallery__slider'),
         counter = document.querySelector('.modal-gallery__counter'),
@@ -15,6 +17,7 @@ const slickGalleryModal = ($) => {
     });
 
     close.addEventListener('click', () => {
+        bodyUnLock();
         modal.classList.remove('modal-gallery--show');
     });
 
@@ -23,12 +26,15 @@ const slickGalleryModal = ($) => {
             const slick = slider.slick('getSlick');
             slick.goTo(+image.getAttribute('data-gallery') - 1, true);
             counter.textContent = `${slick.currentSlide + 1} / ${slick.slideCount}`;
+
+            bodyLock();
             modal.classList.add('modal-gallery--show');
         });
     });
 
     modal.addEventListener('click', (e) => {
         if (e.target && e.target.classList.contains('modal-gallery__wrapper')) {
+            bodyUnLock();
             modal.classList.remove('modal-gallery--show');
         }
     });
