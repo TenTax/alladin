@@ -1,42 +1,43 @@
 // section header
 .header {
-    position: sticky;
-    top: 0;
-    box-shadow: var(--shadow-header);
+    position        : sticky;
+    top             : 0;
+    box-shadow      : var(--shadow-header);
     background-color: var(--color-white);
-    overflow: hidden;
-    z-index: 1;
+    overflow        : hidden;
+    z-index         : 1;
 
     &__menu {
-        display: flex;
+        display        : flex;
         justify-content: center;
-        padding: var(--space-small) 0;
-        list-style: none;
-        width: 100%;
+        padding        : var(--space-small) 0;
+        list-style     : none;
+        width          : 100%;
     }
 
     &__link {
-        display: block;
-        padding: 0 var(--space-small);
-        text-decoration: none;
-        color: var(--color-dark);
+        display            : block;
+        padding            : 0 var(--space-small);
+        text-decoration    : none;
+        color              : var(--color-dark);
         transition-duration: var(--duration-base);
         transition-property: transform, color;
     }
+
     &__link:hover {
         transform: translateY(-1px);
-        color: var(--color-primary);
+        color    : var(--color-primary);
     }
 }
 
 @media (max-width: 575.98px) {
     .header {
-       display: none;
+        display: none;
     }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     .header {
         display: none;
-     }
+    }
 }
