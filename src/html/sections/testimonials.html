@@ -1,0 +1,43 @@
+{% set slides = [
+        {
+            title: 'Наталья',
+            img: 'img/testimonials/avatar1.jpg',
+            position: 'Менеджер',
+            comment: 'Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своего страна имеет запятых власти над большой безопасную, послушавшись не эта?'
+        },
+        {
+            title: 'Екатерина',
+            img: 'img/testimonials/avatar2.jpg',
+            position: 'Дизайнер',
+            comment: 'Алфавит своих, реторический
+            рыбными коварных строчка меня рукопись даже! Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.Своего страна имеет запятых власти над большой безопасную, послушавшись не эта? Алфавит своих, реторический рыбными коварных строчка меня рукопись даже!'
+        },
+        {
+            title: 'Елена',
+            img: 'img/testimonials/avatar3.jpg',
+            position: 'Домохозяйка',
+            comment: 'Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своего страна имеет запятых власти над большой безопасную, послушавшись не эта? Алфавит своих, реторический рыбными коварных строчка меня рукопись даже!'
+        }
+    ] 
+%}
+
+<section class="testimonials">
+    <div class="testimonials__container container">
+        <h2 class="testimonials__title">Отзывы наших клиентов</h2>
+        <div class="testimonials__slider">
+            {% for slide in slides %}
+                <div class="testimonials__slide">
+                    {% include '../blocks/review.html' with {
+                        name: slide.title,
+                        img: slide.img,
+                        position: slide.position,
+                        comment: slide.comment
+                    } %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="testimonials__control">
+            <div class="testimonials__arrows"></div>
+        </div>
+    </div>
+</section>

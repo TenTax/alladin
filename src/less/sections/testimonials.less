@@ -1,0 +1,57 @@
+.testimonials {
+    background-color: #f5e6e8;
+
+    &__container {
+        padding: 100px 0;
+    }
+
+    &__title {
+        color        : var(--color-dark);
+        font-weight  : 700;
+        text-align   : center;
+        font-size    : 40px;
+        margin-bottom: 30px;
+    }
+
+    &__slider {
+        overflow: hidden;
+    }
+
+    &__control {
+        display        : flex;
+        justify-content: center;
+        margin-top     : 30px;
+    }
+
+    &__arrows {
+        display: flex;
+    }
+
+    &__slider .slick-track {
+        align-items: center;
+    }
+
+    &__slider .slick-slide {
+        display        : flex;
+        justify-content: center;
+        opacity        : 1;
+    }
+
+    & .slick-arrow.slick-prev {
+        margin-right: 10px;
+    }
+}
+
+// phone
+@media (max-width: 575.98px) {
+    .testimonials {
+        &__container {
+            padding: 60px 20px;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+
+    }
+}

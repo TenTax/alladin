@@ -1,0 +1,117 @@
+// section gallery
+.gallery {
+    overflow: hidden;
+
+    &__container {
+        padding: 100px 0;
+    }
+
+    &__title {
+        color      : var(--color-dark);
+        font-weight: 700;
+        text-align : center;
+        font-size  : 40px;
+    }
+
+    &__desc {
+        color        : var(--color-dark);
+        font-weight  : 400;
+        font-size    : 20px;
+        text-align   : center;
+        margin-top   : var(--space-small);
+        margin-bottom: var(--space-large);
+    }
+
+    &__slider {
+        min-width: 0;
+    }
+
+    &__img {
+        height    : 500px;
+        object-fit: cover;
+        transition: transform 0.5s;
+    }
+
+    .slick-slide.slick-active &__img:hover {
+        transform: scale(1.2);
+    }
+
+    &__control {
+        padding        : 0 8px;
+        margin-top     : 15px;
+        display        : flex;
+        justify-content: space-between;
+    }
+
+    &__arrows {
+        display: flex;
+    }
+
+    &__slider .slick-slide {
+        margin: 0 8px;
+    }
+
+    & .slick-arrow.slick-prev {
+        margin-right: 15px;
+    }
+}
+
+// phone
+@media (max-width: 575.98px) {
+    .gallery {
+        &__container {
+            padding: 60px 20px;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+
+        &__desc {
+            font-size: 16px;
+        }
+
+        &__control {
+            justify-content: center;
+        }
+
+        &__arrows {
+            display: none;
+        }
+
+        &__img {
+            height: 350px;
+        }
+
+        & .slick-slide {
+            margin: 0 5px;
+        }
+    }
+}
+
+// reverse phone
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .gallery {
+        &__img {
+            height: 300px;
+        }
+    }
+}
+
+// tablet
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .gallery {
+        &__img {
+            height: 350px;
+        }
+    }
+}
+
+// medium
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .gallery {
+        &__img {
+            height: 400px;
+        }
+    }
+}

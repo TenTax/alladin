@@ -1,0 +1,60 @@
+.partners {
+    &__container {
+        padding: 100px 0px;
+    }
+
+    &__title {
+        color      : var(--color-dark);
+        font-weight: 700;
+        text-align : center;
+        font-size  : 40px;
+        margin-bottom: 30px;
+    }
+
+    &__slider {
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__slider .slick-slide {
+        opacity: 1;
+    }
+
+    &__slider img {
+        max-height: 300px;
+        object-fit: contain;
+    }
+
+    &__slider .slick-arrow {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__slider .slick-arrow.slick-prev {
+        left: 8px;
+    }
+    
+    &__slider .slick-arrow.slick-next {
+        right: 8px;
+    }
+
+    &__slider ul.slick-dots {
+        justify-content: center;
+    }
+}
+
+// phone
+@media (max-width: 575.98px) {
+    .partners {
+        &__container {
+            padding: 60px 20px;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+
+    }
+}
