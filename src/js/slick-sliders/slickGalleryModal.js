@@ -5,7 +5,7 @@ const slickGalleryModal = ($) => {
         counter = document.querySelector('.modal-gallery__counter'),
         close = document.querySelector('.modal-gallery__close'),
         modal = document.querySelector('.modal-gallery'),
-        images = document.querySelectorAll('[data-gallery]');
+        images = document.querySelectorAll('.gallery__img');
 
     slider.slick({
         slidesToShow: 1,
