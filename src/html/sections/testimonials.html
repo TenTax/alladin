@@ -27,12 +27,12 @@
         <div class="testimonials__slider">
             {% for slide in slides %}
                 <div class="testimonials__slide">
-                    {% include '../blocks/review.html' with {
-                        name: slide.title,
-                        img: slide.img,
-                        position: slide.position,
-                        comment: slide.comment
-                    } %}
+                    <div class="review">
+                        <img src="{{ slide.img }}" alt="avatar" class="review__img">
+                        <div class="review__name">{{ silde.name }}</div>
+                        <div class="review__position">{{ slide.position }}</div>
+                        <div class="review__comment">{{ slide.comment }}</div>
+                    </div>
                 </div>
             {% endfor %}
         </div>
