@@ -1,0 +1,92 @@
+.consultation {
+    background: linear-gradient(to left, #e4302f, #ee7f14);
+
+    &__container {
+        padding: 40px 0;
+    }
+
+    &__text {
+        font-size    : 22px;
+        font-weight  : 600;
+        color        : #fff;
+        text-align   : center;
+        line-height  : 30px;
+        margin-bottom: 50px;
+    }
+
+    &__grid {
+        display              : grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap      : 30px;
+        align-items          : center;
+    }
+
+    &__form {}
+
+    &__form .form__text {
+        color: #fff;
+    }
+
+    &__form .form__text--red {
+        color: red;
+    }
+
+    &__form .form__group--checkbox {
+        display        : flex;
+        justify-content: center;
+        margin         : 20px 0 0 0;
+    }
+
+    &__form .form__button {
+        background: #ffd300;
+        color     : #333
+    }
+
+}
+
+// phone
+@media (max-width: 575.98px) {
+    .consultation {
+        &__text {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 20px;
+        }
+        &__container {
+            padding: 40px 20px;
+        }
+        &__grid {
+            grid-template-columns: 1fr;
+        }
+
+        &__form .form__button {
+            margin-top: 25px;
+        }
+    }
+}
+
+// reverse phone
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .consultation {
+        &__grid {
+            grid-template-columns: 1fr;
+        }
+
+        &__form .form__button {
+            margin-top: 25px;
+        }
+    }
+}
+
+// tablet
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .consultation {
+        &__grid {
+            grid-template-columns: 1fr;
+        }
+
+        &__form .form__button {
+            margin-top: 25px;
+        }
+    }
+}
