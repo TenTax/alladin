@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'slick-carousel';
+import bindModal from './modules/bindModal';
 import timer from './modules/timer';
 import slickGallery from './slick-sliders/slickGallery';
 import slickGalleryModal from './slick-sliders/slickGalleryModal';
@@ -12,4 +13,5 @@ window.addEventListener('DOMContentLoaded', () => {
    slickGalleryModal($);
    slickPartners($);
    slickTestimonials($);
+   bindModal('.accent__button, .about__button', '.modal-callback', '.modal-callback__close', 'modal-callback--show');
 });
