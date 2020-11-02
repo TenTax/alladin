@@ -1,6 +1,6 @@
 # Учебный проект alladin
 
-Рабочий сайт: Локальный сервер
+Рабочий сайт: [tentax.github.io/alladin/[(https://tentax.github.io/alladin/)
 
 
 
