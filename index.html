@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow" />
+
+    <title>Alladin</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body id="sale">
+    <header class="header">
+        <ul class="header__menu">
+            <li class="header__item">
+                <a href="#sale" class="header__link">Скидка</a>
+            </li>
+            <li class="header__item">
+                <a href="#catalog" class="header__link">Каталог</a>
+            </li>
+            <li class="header__item">
+                <a href="#about" class="header__link">О нас</a>
+            </li>
+            <li class="header__item">
+                <a href="#gallery" class="header__link">Фотогалерея</a>
+            </li>
+            <li class="header__item">
+                <a href="#testimonials" class="header__link">Отзывы</a>
+            </li>
+            <li class="header__item">
+                <a href="#contacts" class="header__link">Контакты</a>
+            </li>
+        </ul>
+    </header>
+
+    <!-- start section subheader -->
+    <section class="subheader">
+        <div class="container">
+            <div class="subheader__box">
+                <div class="subheader__item subheader__call">
+                    <!-- start component call -->
+                    <div class="call">
+                        <a href="tel:+79867589681" class="call__phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <div>
+                            <div class="call__stagework">ежедневно с 10:00 до 22:00</div>
+                            <a href="tel:+79867589681" class="call__number">+7 (986) 758-96-81</a>
+                        </div>
+                    </div>
+                    <!-- end component call -->
+                </div>
+                <div class="subheader__item subheader__company">
+                    <!-- start component company -->
+                    <div class="company">
+                        <div class="company__item">
+                            <div class="company__name">Alladin</div>
+                        </div>
+                        <div class="company__desc">Ковры с уникальным дизайном</div>
+                    </div>
+                    <!-- end component company -->
+                </div>
+                <div class="subheader__item subheader__icons">
+                    <!-- start component icons -->
+                    <ul class="icons">
+                        <li class="icons__item">
+                            <a href="#" class="icons__link">
+                                <i class="fab fa-viber"></i>
+                            </a>
+                        </li>
+                        <li class="icons__item">
+                            <a href="#" class="icons__link">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li class="icons__item">
+                            <a href="#" class="icons__link">
+                                <i class="fab fa-telegram-plane"></i>
+                            </a>
+                        </li>
+                        <li class="icons__item">
+                            <a href="#" class="icons__link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- end component icons -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end section subheader -->
+
+    <section class="starter">
+        <div class="starter__container container">
+            <div class="starter__content">
+                <h2 class="starter__title">Заполните заявку чтобы получить скидку 20%</h2>
+                <div class="starter__description">Введите данные для подачи заявки до окончания акции</div>
+                <div class="starter__timer timer" id="timer">
+                    <h3 class="timer__title">До конца акции осталось</h3>
+                    <div class="timer__body">
+                        <div class="timer__item">
+                            <div class="timer__circle" id="days">00</div>
+                            <div class="timer__text">Дней</div>
+                        </div>
+                        <div class="timer__item">
+                            <div class="timer__circle" id="hours">00</div>
+                            <div class="timer__text">Часов</div>
+                        </div>
+                        <div class="timer__item">
+                            <div class="timer__circle" id="minutes">00</div>
+                            <div class="timer__text">Минут</div>
+                        </div>
+                        <div class="timer__item">
+                            <div class="timer__circle" id="seconds">00</div>
+                            <div class="timer__text">Секунд</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form action="" class="starter__form form">
+                <div class="form__group">
+                    <label for="mainName" class="form__label">
+                        <span class="form__text form__text--red">*</span>
+                        <span class="form__text">Имя</span>
+                    </label>
+                    <input type="text" id="mainName" class="form__input">
+                </div>
+                <div class="form__group">
+                    <label for="mainPhone" class="form__label">
+                        <span class="form__text form__text--red">*</span>
+                        <span class="form__text">Телефон</span>
+                    </label>
+                    <input type="tel" id="mainPhone" class="form__input">
+                </div>
+                <div class="form__group form__group--checkbox">
+                    <input type="checkbox" id="mainCheckbox" class="form__checkbox">
+
+                    <label for="mainCheckbox" class="form__label form__label--checkbox">
+                        <span class="form__text form__text--checkbox form__text--red">*</span>
+                        <span class="form__text form__text--checkbox">Я согласен на обработку моих персональных
+                            данных</span>
+                    </label>
+                </div>
+                <button class="form__button">Получить скидку</button>
+            </form>
+        </div>
+    </section>
+
+
+
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <h2 class="catalog__title">Каталог продукции</h2>
+            <div class="catalog__subtitle">Красивые и яркие ковры</div>
+            <div class="catalog__grid">
+
+                <div class="cart">
+                    <img src="img/catalog/tovar1.jpg" alt="ковер" class="cart__img">
+                    <div class="cart__title">Тюль «Лейлам (тиффани)»</div>
+                    <div class="cart__description">Тюль 300х330 см — 1 шт. Крепление: шторная лента (крючки), кулиска</div>
+
+                    <div class="cart__oldprice">4600 руб.</div>
+
+                    <div class="cart__row">
+                        <div class="cart__price">3180 руб.</div>
+                        <button class="cart__button">Купить</button>
+                    </div>
+                </div>
+
+                <div class="cart">
+                    <img src="img/catalog/tovar2.jpg" alt="ковер" class="cart__img">
+                    <div class="cart__title">Портьера «Арива (бежевый)»</div>
+                    <div class="cart__description">Портьера 1 шт. — 300х295 см. Крепление: шторная лента (крючки), кулиска</div>
+
+                    <div class="cart__oldprice">8100 руб.</div>
+
+                    <div class="cart__row">
+                        <div class="cart__price">6084 руб.</div>
+                        <button class="cart__button">Купить</button>
+                    </div>
+                </div>
+
+                <div class="cart">
+                    <img src="img/catalog/tovar3.jpg" alt="ковер" class="cart__img">
+                    <div class="cart__title">Комплект штор «Риндос»</div>
+                    <div class="cart__description">Портьера 2 шт. — 220х320 см. Крепление: шторная лента (крючки), кулиска</div>
+
+                    <div class="cart__row">
+                        <div class="cart__price">10360 руб.</div>
+                        <button class="cart__button">Купить</button>
+                    </div>
+                </div>
+
+                <div class="cart">
+                    <img src="img/catalog/tovar4.jpg" alt="ковер" class="cart__img">
+                    <div class="cart__title">Тюль для кухни «Лирбонс (розовый)»</div>
+                    <div class="cart__description">Вуаль 300х150 см. — 1 шт. Крепление: шторная лента (крючки), кулиска</div>
+
+                    <div class="cart__oldprice">3100 руб.</div>
+
+                    <div class="cart__row">
+                        <div class="cart__price">2790 руб.</div>
+                        <button class="cart__button">Купить</button>
+                    </div>
+                </div>
+
+            </div>
+            <button class="catalog__button">Показать еще</button>
+        </div>
+    </section>
+
+    <!-- start component features -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="features__box">
+                <div class="features__title fade-in-up">Наши преимущества</div>
+                <div class="features__group">
+                    <div class="features__cart fade-in-up">
+                        <img src="img/features/warranty.png" alt="" class="features__cart-img">
+                        <div class="features__cart-title">100% Гарантия качества</div>
+                        <div class="features__cart-desc">Гарантия от производителя, имеются все сертификаты качества</div>
+                    </div>
+                    <div class="features__cart fade-in-up">
+                        <img src="img/features/sales.png" alt="" class="features__cart-img">
+                        <div class="features__cart-title">Система скидок и бонусов</div>
+                        <div class="features__cart-desc">Накопительная система скидок с первой покупки</div>
+                    </div>
+                    <div class="features__cart fade-in-up">
+                        <img src="img/features/delivery.png" alt="" class="features__cart-img">
+                        <div class="features__cart-title">Кратчайшие сроки доставки</div>
+                        <div class="features__cart-desc">Работаем всегда оперативно. Сроки исполнения заказов от 1 дня</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end component features -->
+
+    <div class="about" id="about">
+        <div class="container">
+            <div class="about__box">
+                <div class="about__banner fade-in-up">
+                    <div class="about__title">О компании</div>
+                    <div class="about__desc">Наша компания вот уже более 5 лет работает на рынке услуг по производству
+                        мебели. Мы работаем по индивидуальным эскизам и предоставляем своим клиентам качественную, прочную и
+                        удобную мебель по выгодным ценам.Почему вот уже 5 лет количество благодарных клиентов непрестанно
+                        растет, как и наша репутация, а положительные отзывы о нас множатся? Мы гарантируем, что заказанная
+                        у нас мебель, украсит любой дом или офис.</div>
+                    <a href="#" class="about__button">Позвонить нам</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="consultation">
+        <div class="consultation__container container">
+            <div class="consultation__text">Сомневаетесь, что именно подойдет к вашему интерьеру - оставьте заявку ПРЯМО
+                СЕЙЧАС на консультацию с дизайнером.</div>
+            <form action="#" class="consultation__form form">
+                <div class="consultation__grid">
+                    <div class="form__group">
+                        <label for="consultationName" class="form__label">
+                            <span class="form__text form__text--red">*</span>
+                            <span class="form__text">Имя</span>
+                        </label>
+                        <input type="text" id="consultationName" class="form__input">
+                    </div>
+                    <div class="form__group">
+                        <label for="consultationPhone" class="form__label">
+                            <span class="form__text form__text--red">*</span>
+                            <span class="form__text">Телефон</span>
+                        </label>
+                        <input type="tel" id="consultationPhone" class="form__input">
+                    </div>
+                    <div class="form__group">
+                        <label for="consultationEmail" class="form__label">
+                            <span class="form__text form__text--red">*</span>
+                            <span class="form__text">Email</span>
+                        </label>
+                        <input type="email" id="consultationEmail" class="form__input">
+                    </div>
+                    <button class="form__button">Заказать</button>
+                </div>
+                <div class="form__group form__group--checkbox">
+                    <input type="checkbox" id="consultationCheckbox" class="form__checkbox">
+                    <label for="consultationCheckbox" class="form__label form__label--checkbox">
+                        <span class="form__text form__text--checkbox form__text--red">*</span>
+                        <span class="form__text form__text--checkbox">Я согласен на обработку моих персональных
+                            данных</span>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="gallery__container container">
+            <h2 class="gallery__title">Наши фотографии ковров</h2>
+            <div class="gallery__desc">Фотографии ковров в интерьере от наших клиентов</div>
+            <div class="gallery__slider">
+                <img src="img/gallery/img1.jpg" alt="Шторы" data-gallery="1" class="gallery__img">
+                <img src="img/gallery/img2.jpg" alt="Шторы" data-gallery="2" class="gallery__img">
+                <img src="img/gallery/img3.jpg" alt="Шторы" data-gallery="3" class="gallery__img">
+                <img src="img/gallery/img4.jpg" alt="Шторы" data-gallery="4" class="gallery__img">
+                <img src="img/gallery/img5.jpg" alt="Шторы" data-gallery="5" class="gallery__img">
+                <img src="img/gallery/img6.jpg" alt="Шторы" data-gallery="6" class="gallery__img">
+                <img src="img/gallery/img7.jpg" alt="Шторы" data-gallery="7" class="gallery__img">
+            </div>
+            <div class="gallery__control">
+                <div class="gallery__arrows"></div>
+                <div class="gallery__dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- start section accent -->
+    <div class="accent">
+        <div class="container">
+            <div class="accent__box">
+                <div class="accent__item">
+                    <div class="accent__title">Бесплатная консультация!</div>
+                    <div class="accent__desc">Не знаете что выбрать? Боитесь ошибиться? Оставьте заявку на бесплатную
+                        консультацию! Наши специалисты помогут подобрать подходящую именно Вам обувь </div>
+                </div>
+                <a href="#" class="accent__button">Позвонить нам</a>
+            </div>
+        </div>
+    </div>
+    <!-- end section accent -->
+
+    <section class="parthers">
+        <div class="partners__container container">
+            <h2 class="partners__title">Наши партнеры</h2>
+            <div class="partners__slider">
+                <img src="img/partners/a-rocket.svg" alt="a-rocket" class="partners__img">
+                <img src="img/partners/asia-point.svg" alt="asia-point" class="partners__img">
+                <img src="img/partners/creative-eco.svg" alt="creative-eco" class="partners__img">
+                <img src="img/partners/green-target.svg" alt="green-target" class="partners__img">
+                <img src="img/partners/kids-power.svg" alt="kids-power" class="partners__img">
+                <img src="img/partners/net-design.svg" alt="net-design" class="partners__img">
+                <img src="img/partners/travel-advisor.svg" alt="travel-advisor" class="partners__img">
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials__container container">
+            <h2 class="testimonials__title">Отзывы наших клиентов</h2>
+            <div class="testimonials__slider">
+
+                <div class="testimonials__slide">
+                    <div class="review">
+                        <img src="img/testimonials/avatar1.jpg" alt="avatar" class="review__img">
+                        <div class="review__name"></div>
+                        <div class="review__position">Менеджер</div>
+                        <div class="review__comment">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своего страна имеет запятых власти над большой безопасную, послушавшись не эта?</div>
+                    </div>
+                </div>
+
+                <div class="testimonials__slide">
+                    <div class="review">
+                        <img src="img/testimonials/avatar2.jpg" alt="avatar" class="review__img">
+                        <div class="review__name"></div>
+                        <div class="review__position">Дизайнер</div>
+                        <div class="review__comment">Алфавит своих, реторический
+                            рыбными коварных строчка меня рукопись даже! Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.Своего страна имеет запятых власти над большой безопасную, послушавшись не эта? Алфавит своих, реторический рыбными коварных строчка меня рукопись даже!</div>
+                    </div>
+                </div>
+
+                <div class="testimonials__slide">
+                    <div class="review">
+                        <img src="img/testimonials/avatar3.jpg" alt="avatar" class="review__img">
+                        <div class="review__name"></div>
+                        <div class="review__position">Домохозяйка</div>
+                        <div class="review__comment">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своего страна имеет запятых власти над большой безопасную, послушавшись не эта? Алфавит своих, реторический рыбными коварных строчка меня рукопись даже!</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="testimonials__control">
+                <div class="testimonials__arrows"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- start section maps -->
+    <div class="maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d19120.02074485024!2d45.198481349999994!3d53.1998697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1599638439874!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+        </iframe>
+    </div>
+    <!-- end section maps -->
+
+    <!-- start section footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__box">
+                <div class="footer__item">
+                    <div>
+                        <a href="#" class="footer__link">
+                            <i class="fas fa-phone footer__circle"></i>
+                            <span>+7 (986) 758-96-81</span>
+                        </a>
+                        <div class="footer__link">
+                            <i class="fas fa-map-marker-alt footer__circle"></i>
+                            <span>г. Заречный, ул. Восточная 4, Россия</span>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#" class="footer__link">
+                            <i class="fas fa-envelope footer__circle"></i>
+                            <span>mail@example.com</span>
+                        </a>
+                        <div class="footer__social">
+                            <!-- start component social -->
+                            <div class="social">
+                                <a href="#" class="social__circle">
+                                    <i class="fab fa-viber"></i>
+                                </a>
+                                <a href="#" class="social__circle">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="#" class="social__circle">
+                                    <i class="fab fa-telegram-plane"></i>
+                                </a>
+                                <a href="#" class="social__circle">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                            <!-- end component social -->
+                        </div>
+                    </div>
+                </div>
+                <!-- start component form-footer -->
+                <form action="" class="form-footer fade-in-up" id="contacts">
+                    <div class="form-footer__group">
+                        <div class="form-footer__title"><span class="form-footer_red">*</span> Имя</div>
+                        <input type="text" class="form-footer__input">
+                    </div>
+                    <div class="form-footer__group">
+                        <div class="form-footer__title"><span class="form-footer_red">*</span> Телефон</div>
+                        <input type="text" class="form-footer__input">
+                    </div>
+                    <div class="form-footer__group">
+                        <input type="checkbox" checked id="form-footer__checkbox" class="form-footer__checkbox">
+                        <label for="form-footer__checkbox" class="form-footer__label">
+                            <span class="form-footer_red">*</span>
+                            <span>Я согласен на обработку моих </span>
+                            <a href="#" class="form-footer__link">персональных данных</a>
+                        </label>
+                    </div>
+                    <button class="form-footer__button">Оставить заявку</button>
+                </form>
+                <!-- end component form-footer -->
+            </div>
+        </div>
+    </footer>
+    <!-- end section footer -->
+
+    <div class="modal-gallery">
+        <div class="modal-gallery__wrapper">
+            <div class="modal-gallery__header">
+                <div class="modal-gallery__counter">1 / 2</div>
+                <div class="modal-gallery__close"></div>
+            </div>
+            <div class="modal-gallery__slider">
+                <img src="./img/gallery/img1.jpg" alt="Шторы" class="modal-gallery__img">
+                <img src="./img/gallery/img2.jpg" alt="Шторы" class="modal-gallery__img">
+                <img src="./img/gallery/img3.jpg" alt="Шторы" class="modal-gallery__img">
+                <img src="./img/gallery/img4.jpg" alt="Шторы" class="modal-gallery__img">
+                <img src="./img/gallery/img5.jpg" alt="Шторы" class="modal-gallery__img">
+                <img src="./img/gallery/img6.jpg" alt="Шторы" class="modal-gallery__img">
+                <img src="./img/gallery/img7.jpg" alt="Шторы" class="modal-gallery__img">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-callback">
+        <div class="modal-callback__wrapper">
+            <div class="modal-callback__close"></div>
+            <div class="modal-callback__content">
+                <h4 class="modal-callback__title">Заказать обратный звонок</h4>
+                <form action="" class="modal-callback__form form">
+                    <div class="form__group">
+                        <label for="callbackName" class="form__label">
+                            <span class="form__text form__text--red">*</span>
+                            <span class="form__text">Имя</span>
+                        </label>
+                        <input type="text" id="callbackName" class="form__input">
+                    </div>
+                    <div class="form__group">
+                        <label for="callbackPhone" class="form__label">
+                            <span class="form__text form__text--red">*</span>
+                            <span class="form__text">Телефон</span>
+                        </label>
+                        <input type="tel" id="callbackPhone" class="form__input">
+                    </div>
+                    <div class="form__group form__group--checkbox">
+                        <input type="checkbox" id="callbackCheckbox" class="form__checkbox">
+                        <label for="callbackCheckbox" class="form__label form__label--checkbox">
+                            <span class="form__text form__text--checkbox form__text--red">*</span>
+                            <span class="form__text form__text--checkbox">Я согласен на обработку моих персональных
+                                данных</span>
+                        </label>
+                    </div>
+                    <button class="form__button">Заказать</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js" type="text/javascript"></script>
+</body>
+
+</html>
