@@ -23,7 +23,7 @@ const catalogAjax = () => {
                     `;
                     container.appendChild(card);
                 });
-                
+
                 bindModal('.cart__button', '.modal-product', '.modal-product__close', 'modal-product--show');
                 btn.remove();
             })
