@@ -6,7 +6,8 @@ const forms = () => {
     const forms = document.querySelectorAll('form');
 
     forms.forEach(form => {
-        const inputs = form.querySelectorAll('input:not([type="checkbox"]), textarea');
+        const inputs = form.querySelectorAll('input:not([type="checkbox"]), textarea'),
+            checkbox = form.querySelector('input[type="checkbox"]');
 
         const clearInputs = () => {
             inputs.forEach(input => {
@@ -19,6 +20,10 @@ const forms = () => {
             input.addEventListener('input', () => {
                 input.parentNode.className = 'form__group';
             });
+        });
+
+        checkbox.addEventListener('change', () => {
+            checkbox.parentNode.className = 'form__group';
         });
 
         form.addEventListener('submit', e => {
