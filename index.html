@@ -51,7 +51,7 @@
                         </a>
                         <div>
                             <div class="call__stagework">ежедневно с 10:00 до 22:00</div>
-                            <a href="tel:+79867589681" class="call__number">+7 (986) 758-96-81</a>
+                            <a href="tel:+79867589681" class="call__number">+7 (986) 758-96-83</a>
                         </div>
                     </div>
                     <!-- end component call -->
@@ -105,41 +105,43 @@
                 <div class="starter__timer timer" id="timer">
                     <h3 class="timer__title">До конца акции осталось</h3>
                     <div class="timer__body">
-                        <div class="timer__item">
+                        <div class="timer__item animated fade-in-up delay-1">
                             <div class="timer__circle" id="days">00</div>
                             <div class="timer__text">Дней</div>
                         </div>
-                        <div class="timer__item">
+                        <div class="timer__item animated fade-in-down delay-1">
                             <div class="timer__circle" id="hours">00</div>
                             <div class="timer__text">Часов</div>
                         </div>
-                        <div class="timer__item">
+                        <div class="timer__item animated fade-in-up delay-1">
                             <div class="timer__circle" id="minutes">00</div>
                             <div class="timer__text">Минут</div>
                         </div>
-                        <div class="timer__item">
+                        <div class="timer__item animated fade-in-down delay-1">
                             <div class="timer__circle" id="seconds">00</div>
                             <div class="timer__text">Секунд</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <form action="" class="starter__form form">
+            <form class="starter__form form animated fade-in-up delay-2">
                 <div class="form__group">
                     <label for="mainName" class="form__label">
                         <span class="form__text form__text--red">*</span>
                         <span class="form__text">Имя</span>
                     </label>
-                    <input type="text" id="mainName" class="form__input">
+                    <input type="text" id="mainName" name="name" class="form__input">
+                    <div class="form__error"></div>
                 </div>
                 <div class="form__group">
                     <label for="mainPhone" class="form__label">
                         <span class="form__text form__text--red">*</span>
                         <span class="form__text">Телефон</span>
                     </label>
-                    <input type="tel" id="mainPhone" class="form__input">
+                    <input type="tel" id="mainPhone" name="phone" class="form__input">
+                    <div class="form__error"></div>
                 </div>
-                <div class="form__group form__group--checkbox">
+                <div class="form__group">
                     <input type="checkbox" id="mainCheckbox" class="form__checkbox">
 
                     <label for="mainCheckbox" class="form__label form__label--checkbox">
@@ -147,6 +149,7 @@
                         <span class="form__text form__text--checkbox">Я согласен на обработку моих персональных
                             данных</span>
                     </label>
+                    <div class="form__error"></div>
                 </div>
                 <button class="form__button">Получить скидку</button>
             </form>
@@ -157,11 +160,11 @@
 
     <section class="catalog" id="catalog">
         <div class="container">
-            <h2 class="catalog__title">Каталог продукции</h2>
-            <div class="catalog__subtitle">Красивые и яркие ковры</div>
+            <h2 class="catalog__title animated fade-in-right">Каталог продукции</h2>
+            <div class="catalog__subtitle animated fade-in-left">Красивые и яркие ковры</div>
             <div class="catalog__grid">
 
-                <div class="cart">
+                <div class="cart animated fade-in-up">
                     <img src="img/catalog/tovar1.jpg" alt="ковер" class="cart__img">
                     <div class="cart__title">Тюль «Лейлам (тиффани)»</div>
                     <div class="cart__description">Тюль 300х330 см — 1 шт. Крепление: шторная лента (крючки), кулиска</div>
@@ -174,7 +177,7 @@
                     </div>
                 </div>
 
-                <div class="cart">
+                <div class="cart animated fade-in-up">
                     <img src="img/catalog/tovar2.jpg" alt="ковер" class="cart__img">
                     <div class="cart__title">Портьера «Арива (бежевый)»</div>
                     <div class="cart__description">Портьера 1 шт. — 300х295 см. Крепление: шторная лента (крючки), кулиска</div>
@@ -187,7 +190,7 @@
                     </div>
                 </div>
 
-                <div class="cart">
+                <div class="cart animated fade-in-up">
                     <img src="img/catalog/tovar3.jpg" alt="ковер" class="cart__img">
                     <div class="cart__title">Комплект штор «Риндос»</div>
                     <div class="cart__description">Портьера 2 шт. — 220х320 см. Крепление: шторная лента (крючки), кулиска</div>
@@ -198,7 +201,7 @@
                     </div>
                 </div>
 
-                <div class="cart">
+                <div class="cart animated fade-in-up">
                     <img src="img/catalog/tovar4.jpg" alt="ковер" class="cart__img">
                     <div class="cart__title">Тюль для кухни «Лирбонс (розовый)»</div>
                     <div class="cart__description">Вуаль 300х150 см. — 1 шт. Крепление: шторная лента (крючки), кулиска</div>
@@ -212,7 +215,7 @@
                 </div>
 
             </div>
-            <button class="catalog__button">Показать еще</button>
+            <button class="catalog__button animated fade-in-up">Показать еще</button>
         </div>
     </section>
 
@@ -220,19 +223,19 @@
     <section class="features" id="features">
         <div class="container">
             <div class="features__box">
-                <div class="features__title fade-in-up">Наши преимущества</div>
+                <div class="features__title animated fade-in-up">Наши преимущества</div>
                 <div class="features__group">
-                    <div class="features__cart fade-in-up">
+                    <div class="features__cart animated fade-in-up delay-1">
                         <img src="img/features/warranty.png" alt="" class="features__cart-img">
                         <div class="features__cart-title">100% Гарантия качества</div>
                         <div class="features__cart-desc">Гарантия от производителя, имеются все сертификаты качества</div>
                     </div>
-                    <div class="features__cart fade-in-up">
+                    <div class="features__cart animated fade-in-up delay-2">
                         <img src="img/features/sales.png" alt="" class="features__cart-img">
                         <div class="features__cart-title">Система скидок и бонусов</div>
                         <div class="features__cart-desc">Накопительная система скидок с первой покупки</div>
                     </div>
-                    <div class="features__cart fade-in-up">
+                    <div class="features__cart animated fade-in-up delay-3">
                         <img src="img/features/delivery.png" alt="" class="features__cart-img">
                         <div class="features__cart-title">Кратчайшие сроки доставки</div>
                         <div class="features__cart-desc">Работаем всегда оперативно. Сроки исполнения заказов от 1 дня</div>
@@ -246,14 +249,14 @@
     <div class="about" id="about">
         <div class="container">
             <div class="about__box">
-                <div class="about__banner fade-in-up">
-                    <div class="about__title">О компании</div>
-                    <div class="about__desc">Наша компания вот уже более 5 лет работает на рынке услуг по производству
+                <div class="about__banner">
+                    <div class="about__title animated fade-in-right">О компании</div>
+                    <div class="about__desc animated fade-in-right delay-1">Наша компания вот уже более 5 лет работает на рынке услуг по производству
                         мебели. Мы работаем по индивидуальным эскизам и предоставляем своим клиентам качественную, прочную и
                         удобную мебель по выгодным ценам.Почему вот уже 5 лет количество благодарных клиентов непрестанно
                         растет, как и наша репутация, а положительные отзывы о нас множатся? Мы гарантируем, что заказанная
                         у нас мебель, украсит любой дом или офис.</div>
-                    <a href="#" class="about__button">Позвонить нам</a>
+                    <a href="#" class="about__button animated fade-in-right delay-2">Позвонить нам</a>
                 </div>
             </div>
         </div>
@@ -270,31 +273,27 @@
                             <span class="form__text form__text--red">*</span>
                             <span class="form__text">Имя</span>
                         </label>
-                        <input type="text" id="consultationName" class="form__input">
+                        <input type="text" id="consultationName" name="name" class="form__input">
+                        <div class="form__error"></div>
                     </div>
                     <div class="form__group">
                         <label for="consultationPhone" class="form__label">
                             <span class="form__text form__text--red">*</span>
                             <span class="form__text">Телефон</span>
                         </label>
-                        <input type="tel" id="consultationPhone" class="form__input">
-                    </div>
-                    <div class="form__group">
-                        <label for="consultationEmail" class="form__label">
-                            <span class="form__text form__text--red">*</span>
-                            <span class="form__text">Email</span>
-                        </label>
-                        <input type="email" id="consultationEmail" class="form__input">
+                        <input type="tel" id="consultationPhone" name="phone" class="form__input">
+                        <div class="form__error"></div>
                     </div>
                     <button class="form__button">Заказать</button>
                 </div>
-                <div class="form__group form__group--checkbox">
+                <div class="form__group">
                     <input type="checkbox" id="consultationCheckbox" class="form__checkbox">
                     <label for="consultationCheckbox" class="form__label form__label--checkbox">
                         <span class="form__text form__text--checkbox form__text--red">*</span>
                         <span class="form__text form__text--checkbox">Я согласен на обработку моих персональных
                             данных</span>
                     </label>
+                    <div class="form__error"></div>
                 </div>
             </form>
         </div>
@@ -302,8 +301,8 @@
 
     <section class="gallery" id="gallery">
         <div class="gallery__container container">
-            <h2 class="gallery__title">Наши фотографии ковров</h2>
-            <div class="gallery__desc">Фотографии ковров в интерьере от наших клиентов</div>
+            <h2 class="gallery__title animated fade-in-right">Наши фотографии ковров</h2>
+            <div class="gallery__desc animated fade-in-left">Фотографии ковров в интерьере от наших клиентов</div>
             <div class="gallery__slider">
                 <img src="img/gallery/img1.jpg" alt="Шторы" data-gallery="1" class="gallery__img">
                 <img src="img/gallery/img2.jpg" alt="Шторы" data-gallery="2" class="gallery__img">
@@ -337,8 +336,8 @@
 
     <section class="parthers">
         <div class="partners__container container">
-            <h2 class="partners__title">Наши партнеры</h2>
-            <div class="partners__slider">
+            <h2 class="partners__title animated fade-in-right">Наши партнеры</h2>
+            <div class="partners__slider animated fade-in-up">
                 <img src="img/partners/a-rocket.svg" alt="a-rocket" class="partners__img">
                 <img src="img/partners/asia-point.svg" alt="asia-point" class="partners__img">
                 <img src="img/partners/creative-eco.svg" alt="creative-eco" class="partners__img">
@@ -354,8 +353,8 @@
 
     <section class="testimonials" id="testimonials">
         <div class="testimonials__container container">
-            <h2 class="testimonials__title">Отзывы наших клиентов</h2>
-            <div class="testimonials__slider">
+            <h2 class="testimonials__title animated fade-in-right">Отзывы наших клиентов</h2>
+            <div class="testimonials__slider animated fade-in-up">
 
                 <div class="testimonials__slide">
                     <div class="review">
@@ -439,27 +438,35 @@
                         </div>
                     </div>
                 </div>
-                <!-- start component form-footer -->
-                <form action="" class="form-footer fade-in-up" id="contacts">
-                    <div class="form-footer__group">
-                        <div class="form-footer__title"><span class="form-footer_red">*</span> Имя</div>
-                        <input type="text" class="form-footer__input">
-                    </div>
-                    <div class="form-footer__group">
-                        <div class="form-footer__title"><span class="form-footer_red">*</span> Телефон</div>
-                        <input type="text" class="form-footer__input">
-                    </div>
-                    <div class="form-footer__group">
-                        <input type="checkbox" checked id="form-footer__checkbox" class="form-footer__checkbox">
-                        <label for="form-footer__checkbox" class="form-footer__label">
-                            <span class="form-footer_red">*</span>
-                            <span>Я согласен на обработку моих </span>
-                            <a href="#" class="form-footer__link">персональных данных</a>
+                <form class="footer__form form">
+                    <div class="form__group">
+                        <label for="footerName" class="form__label">
+                            <span class="form__text form__text--red">*</span>
+                            <span class="form__text">Имя</span>
                         </label>
+                        <input type="text" id="footerName" name="name" class="form__input">
+                        <div class="form__error"></div>
                     </div>
-                    <button class="form-footer__button">Оставить заявку</button>
+                    <div class="form__group">
+                        <label for="footerPhone" class="form__label">
+                            <span class="form__text form__text--red">*</span>
+                            <span class="form__text">Телефон</span>
+                        </label>
+                        <input type="tel" id="footerPhone" name="phone" class="form__input">
+                        <div class="form__error"></div>
+                    </div>
+                    <div class="form__group">
+                        <input type="checkbox" id="footerCheckbox" class="form__checkbox">
+
+                        <label for="footerCheckbox" class="form__label form__label--checkbox">
+                            <span class="form__text form__text--checkbox form__text--red">*</span>
+                            <span class="form__text form__text--checkbox">Я согласен на обработку моих персональных
+                                данных</span>
+                        </label>
+                        <div class="form__error"></div>
+                    </div>
+                    <button class="form__button">Получить скидку</button>
                 </form>
-                <!-- end component form-footer -->
             </div>
         </div>
     </footer>
@@ -494,14 +501,16 @@
                             <span class="form__text form__text--red">*</span>
                             <span class="form__text">Имя</span>
                         </label>
-                        <input type="text" id="callbackName" class="form__input">
+                        <input type="text" id="callbackName" name="name" class="form__input">
+                        <div class="form__error"></div>
                     </div>
                     <div class="form__group">
                         <label for="callbackPhone" class="form__label">
                             <span class="form__text form__text--red">*</span>
                             <span class="form__text">Телефон</span>
                         </label>
-                        <input type="tel" id="callbackPhone" class="form__input">
+                        <input type="tel" id="callbackPhone" name="phone" class="form__input">
+                        <div class="form__error"></div>
                     </div>
                     <div class="form__group form__group--checkbox">
                         <input type="checkbox" id="callbackCheckbox" class="form__checkbox">
@@ -510,6 +519,44 @@
                             <span class="form__text form__text--checkbox">Я согласен на обработку моих персональных
                                 данных</span>
                         </label>
+                        <div class="form__error"></div>
+                    </div>
+                    <button class="form__button">Заказать</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-product">
+        <div class="modal-product__wrapper">
+            <div class="modal-product__close"></div>
+            <div class="modal-product__content">
+                <h4 class="modal-product__title">Форма заказа товара</h4>
+                <form action="" class="modal-product__form form">
+                    <div class="form__group">
+                        <label for="productName" class="form__label">
+                            <span class="form__text form__text--red">*</span>
+                            <span class="form__text">Имя</span>
+                        </label>
+                        <input type="text" id="productName" name="name" class="form__input">
+                        <div class="form__error"></div>
+                    </div>
+                    <div class="form__group">
+                        <label for="productPhone" class="form__label">
+                            <span class="form__text form__text--red">*</span>
+                            <span class="form__text">Телефон</span>
+                        </label>
+                        <input type="tel" id="productPhone" name="phone" class="form__input">
+                        <div class="form__error"></div>
+                    </div>
+                    <div class="form__group form__group--checkbox">
+                        <input type="checkbox" id="productCheckbox" class="form__checkbox">
+                        <label for="productCheckbox" class="form__label form__label--checkbox">
+                            <span class="form__text form__text--checkbox form__text--red">*</span>
+                            <span class="form__text form__text--checkbox">Я согласен на обработку моих персональных
+                                данных</span>
+                        </label>
+                        <div class="form__error"></div>
                     </div>
                     <button class="form__button">Заказать</button>
                 </form>
