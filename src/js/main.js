@@ -14,4 +14,5 @@ window.addEventListener('DOMContentLoaded', () => {
    slickPartners($);
    slickTestimonials($);
    bindModal('.accent__button, .about__button', '.modal-callback', '.modal-callback__close', 'modal-callback--show');
+   bindModal('.cart__button', '.modal-product', '.modal-product__close', 'modal-product--show');
 });
