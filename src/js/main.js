@@ -7,10 +7,12 @@ import slickGallery from './slick-sliders/slickGallery';
 import slickGalleryModal from './slick-sliders/slickGalleryModal';
 import slickPartners from './slick-sliders/slickPartners';
 import slickTestimonials from './slick-sliders/slickTestimonials';
+import catalogAjax from './modules/catalogAjax';
 
 window.addEventListener('DOMContentLoaded', () => {
    timer('#timer', '2021-11-03');
    forms();
+   catalogAjax();
    slickGallery($);
    slickGalleryModal($);
    slickPartners($);
