@@ -23,13 +23,13 @@ try {
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
-    $mail->Username   = 'kostya.dorokhov.2016@mail.ru'; // Логин на почте
-    $mail->Password   = '20582kot'; // Пароль на почте
+    $mail->Username   = 'test@mail.ru'; // Логин на почте
+    $mail->Password   = 'secret'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('kostya.dorokhov.2016@mail.ru', 'Константин'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('test@mail.ru', 'Константин'); // Адрес самой почты и имя отправителя
 
-    $mail->addAddress('kostya.dorokhov.2016@gmail.com'); // Получатель письма
+    $mail->addAddress('test@gmail.com'); // Получатель письма
 
 // Файл
 // if (!empty($file['name'][0])) {

@@ -16,8 +16,8 @@ const newer = require('gulp-newer');
 const imagemin = require('gulp-imagemin');
 
 
-// const distfolder = './dist/';
-const distfolder = '../../OpenServer/domains/alladin/';
+const distfolder = './dist/';
+// const distfolder = '../../OpenServer/domains/alladin/';
 
 
 // const buildfolder   = './build/';
