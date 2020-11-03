@@ -2,6 +2,7 @@ import $ from 'jquery';
 import 'slick-carousel';
 import bindModal from './modules/bindModal';
 import timer from './modules/timer';
+import forms from './modules/forms';
 import slickGallery from './slick-sliders/slickGallery';
 import slickGalleryModal from './slick-sliders/slickGalleryModal';
 import slickPartners from './slick-sliders/slickPartners';
@@ -9,6 +10,7 @@ import slickTestimonials from './slick-sliders/slickTestimonials';
 
 window.addEventListener('DOMContentLoaded', () => {
    timer('#timer', '2021-11-03');
+   forms();
    slickGallery($);
    slickGalleryModal($);
    slickPartners($);

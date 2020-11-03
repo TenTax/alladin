@@ -23,6 +23,10 @@
 
     &__form {}
 
+    &__form .form__error {
+        color: #fff;
+    }
+
     &__form .form__text {
         color: #fff;
     }
@@ -31,15 +35,15 @@
         color: red;
     }
 
-    &__form .form__group--checkbox {
-        display        : flex;
-        justify-content: center;
-        margin         : 20px 0 0 0;
+    &__form .form__button {
+        background   : #ffd300;
+        color        : #333;
+        margin-bottom: 15px;
     }
 
-    &__form .form__button {
-        background: #ffd300;
-        color     : #333
+    &__form .form__message {
+        background-color: #eee;
+        border-radius   : 5px;
     }
 
 }
@@ -48,13 +52,15 @@
 @media (max-width: 575.98px) {
     .consultation {
         &__text {
-            font-size: 18px;
-            line-height: 22px;
+            font-size    : 18px;
+            line-height  : 22px;
             margin-bottom: 20px;
         }
+
         &__container {
             padding: 40px 20px;
         }
+
         &__grid {
             grid-template-columns: 1fr;
         }
