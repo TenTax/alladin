@@ -1,25 +1,32 @@
-const scrollAnimate = (selector) => {
-    const blocks = document.querySelectorAll(selector);
+const scrollAnimate = () => {
 
-    window.addEventListener('scroll', windowScroll);
+    let animItems = document.querySelectorAll('.animated');
 
-    function windowScroll() {
-        const clientHeight = document.documentElement.clientHeight;
-        const scrollTop = document.documentElement.scrollTop;
-        const scrollBottom = scrollTop + clientHeight;
+    if (animItems.length > 0) {
+        window.addEventListener('scroll', animOnScroll);
 
-        blocks.forEach((block) => {
-            const blockHeight = block.scrollHeight;
-            const blockTop = block.offsetTop;
-            const blockIndex = blockTop + blockHeight / 4;
+        function animOnScroll() {
+            animItems.forEach(animItem => {
+                const animItemHeight = animItem.offsetHeight,
+                    animItemOffset = offset(animItem).top,
+                    animStart = 3;
 
-            if (scrollBottom > blockIndex) {
-                block.classList.remove('fade-in', 'fade-in-up', 'fade-in-down', 'fade-in-right', 'fade-in-left');
-            }
-        });
+                if ((pageYOffset + window.innerHeight) > (animItemOffset + animItemHeight / animStart)) {
+                    animItem.classList.remove('animated');
+                }
+
+            });
+        }
+
+        function offset(el) {
+            const rect = el.getBoundingClientRect(),
+                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+        }
+
+        setTimeout(() => animOnScroll(), 300);
     }
-
-    windowScroll();
 };
 
 export default scrollAnimate;

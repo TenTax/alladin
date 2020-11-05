@@ -1,9 +1,41 @@
-.animated {
-    visibility: visible;
-    opacity: 1;
-    transition: all 0.8s;
-    transform: translate(0, 0);
+.fade-in {
+    transition: opacity 0.5s;
 }
+.animated.fade-in {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.fade-in-up {
+    transition-property: transform, opacity;
+    transition-duration: 0.5s;
+}
+.animated.fade-in-up {
+    visibility: hidden;
+    transform: translateY(80px);
+    opacity: 0;
+}
+
+.fade-in-left {
+    transition-property: transform, opacity;
+    transition-duration: 0.5s;
+}
+.animated.fade-in-left {
+    visibility: hidden;
+    transform: translateX(80px);
+    opacity: 0;
+}
+
+.fade-in-right {
+    transition-property: transform, opacity;
+    transition-duration: 0.5s;
+}
+.animated.fade-in-right {
+    visibility: hidden;
+    transform: translateX(-80px);
+    opacity: 0;
+}
+
 .delay-1 {
     transition-delay: 0.2s;
 }
@@ -14,33 +46,4 @@
 
 .delay-3 {
     transition-delay: 0.6s;
-}
-
-.fade-in {
-    visibility: hidden;
-    opacity: 0;
-}
-
-.fade-in-up {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(50px);
-}
-
-.fade-in-down {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-50px);
-}
-
-.fade-in-right {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateX(80px);
-}
-
-.fade-in-left {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateX(-80px);
 }
